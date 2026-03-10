@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #1B3A6B;
+  --navy-mid: #243d7a;
+  --navy-dk: #0f2348;
+  --teal: #0D8FAB;
+  --teal-lt: #12a8c7;
+  --teal-pale: #e8f7fa;
+  --cream: #F8F5F0;
+  --cream-dk: #EDE9E2;
+  --amber: #E8860A;
+  --amber-lt: #f5a030;
+  --amber-pale: #fef3e2;
+  --white: #fff;
+  --t1: #1a1a2e;
+  --t2: #4a5568;
+  --t3: #718096;
+  --border: #E0DAD2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--t1);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Fade-in animation */
+.fi {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fi.v {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+.d4 { transition-delay: 0.4s; }
+
+/* Float animation for hero pills */
+@keyframes flt {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+/* Pulse animation for observation dot */
+@keyframes pulse2 {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Voice wave animation */
+@keyframes wave {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.6); }
+}
