@@ -39,13 +39,13 @@ export default function Hero() {
             <FadeIn delay={3}>
               <div className="flex items-center gap-3.5 flex-wrap">
                 <Link
-                  href="/signup"
+                  href="https://app.childwisesoftware.com/login"
                   className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-white hover:bg-teal-lt hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(13,143,171,.35)]"
                 >
                   Start Free Trial →
                 </Link>
                 <Link
-                  href="/demo"
+                  href="https://app.childwisesoftware.com/login"
                   className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-navy bg-transparent text-navy hover:bg-navy hover:text-white hover:-translate-y-px"
                 >
                   See a Demo

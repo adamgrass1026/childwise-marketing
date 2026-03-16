@@ -16,13 +16,13 @@ export default function CtaBanner() {
         </p>
         <div className="flex items-center justify-center gap-3.5 flex-wrap">
           <Link
-            href="/signup"
+            href="https://app.childwisesoftware.com/login"
             className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white bg-white text-navy hover:bg-cream hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(0,0,0,.12)]"
           >
             Start Free 14-Day Trial →
           </Link>
           <Link
-            href="/demo"
+            href="https://app.childwisesoftware.com/login"
             className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:-translate-y-px"
           >
             Schedule a Demo

@@ -78,7 +78,7 @@ export default function Training() {
                 Explore ChildWise Learning →
               </a>
               <Link
-                href="/demo"
+                href="https://app.childwisesoftware.com/login"
                 className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-navy bg-transparent text-navy hover:bg-navy hover:text-white hover:-translate-y-px"
               >
                 View CDA Pathway

@@ -19,7 +19,7 @@ const plans = [
       "5 staff accounts",
     ],
     cta: "Start Free Trial",
-    ctaHref: "/signup",
+    ctaHref: "https://app.childwisesoftware.com/login",
     popular: false,
   },
   {
@@ -39,7 +39,7 @@ const plans = [
       "Priority phone support",
     ],
     cta: "Start Free Trial",
-    ctaHref: "/signup",
+    ctaHref: "https://app.childwisesoftware.com/login",
     popular: true,
   },
   {
@@ -58,7 +58,7 @@ const plans = [
       "Dedicated account manager",
     ],
     cta: "Contact Sales",
-    ctaHref: "/contact",
+    ctaHref: "https://app.childwisesoftware.com/login",
     popular: false,
   },
 ];

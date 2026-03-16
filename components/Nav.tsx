@@ -56,18 +56,18 @@ export default function Nav() {
         </ul>
 
         <div className="flex items-center gap-2.5 shrink-0">
-          <Link
-            href="/login"
+          <a
+            href="https://app.childwisesoftware.com/login"
             className="text-sm font-medium text-t2 no-underline px-3.5 py-[7px] rounded-lg transition-all duration-150 hover:text-navy hover:bg-cream-dk"
           >
             Sign in
-          </Link>
-          <Link
-            href="/signup"
+          </a>
+          <a
+            href="https://app.childwisesoftware.com/login"
             className="inline-flex items-center gap-2 px-[18px] py-[9px] rounded-lg font-body text-[13px] font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-white hover:bg-teal-lt hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(13,143,171,.35)]"
           >
             Get Started Free
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

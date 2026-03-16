@@ -31,7 +31,7 @@ const footerColumns = [
       { label: "Help Center", href: "#" },
       { label: "Blog", href: "#" },
       { label: "Careers", href: "#" },
-      { label: "Contact", href: "/contact" },
+      { label: "Contact", href: "https://app.childwisesoftware.com/login" },
       { label: "Security & HIPAA", href: "#" },
       { label: "ChildWise Learning ↗", href: "https://childwiselearning.com" },
     ],
