@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CtaBanner() {
   return (
-    <section className="bg-gradient-to-br from-teal via-[#0a7a96] to-navy relative overflow-hidden" style={{ backgroundImage: "linear-gradient(140deg, #0D8FAB 0%, #0a7a96 40%, #1B3A6B 100%)" }}>
+    <section className="bg-gradient-to-br from-teal via-[#089e9b] to-ink relative overflow-hidden" style={{ backgroundImage: "linear-gradient(140deg, #0ABFBC 0%, #089e9b 40%, #0D1B2A 100%)" }}>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_45%_55%_at_85%_50%,rgba(255,255,255,.07)_0%,transparent_50%)]" />
       <div className="relative text-center py-[92px] px-9">
         <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-white/90 px-3.5 py-[5px] bg-white/[.12] border border-white/25 rounded-full mb-[18px]">
@@ -17,7 +17,7 @@ export default function CtaBanner() {
         <div className="flex items-center justify-center gap-3.5 flex-wrap">
           <Link
             href="https://app.childwisesoftware.com/login"
-            className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white bg-white text-navy hover:bg-cream hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(0,0,0,.12)]"
+            className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white bg-white text-ink hover:bg-[#F0F7FC] hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(0,0,0,.12)]"
           >
             Start Free 14-Day Trial →
           </Link>

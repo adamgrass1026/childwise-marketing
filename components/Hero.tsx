@@ -1,192 +1,185 @@
+"use client";
+
 import Link from "next/link";
-import FadeIn from "./FadeIn";
+import { useEffect, useState } from "react";
+
+const pills = [
+  { word: "Assessment", color: "#1B6CA8" },
+  { word: "Schedule", color: "#0ABFBC" },
+  { word: "Train", color: "#22C58B" },
+  { word: "Enroll", color: "#E8860A" },
+];
+
+const stats = [
+  { num: "500+", label: "Centers" },
+  { num: "12K+", label: "Children" },
+  { num: "4.9★", label: "Rating" },
+];
 
 export default function Hero() {
-  return (
-    <section className="pt-[148px] pb-20 relative overflow-hidden">
-      {/* Background gradients */}
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_55%_at_65%_-5%,rgba(13,143,171,.08)_0%,transparent_55%),radial-gradient(ellipse_40%_40%_at_5%_85%,rgba(27,58,107,.05)_0%,transparent_50%)]" />
+  const [visible, setVisible] = useState(false);
 
-      <div className="max-w-wrap mx-auto px-9">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-[72px] items-center">
-          {/* Left column */}
-          <div>
-            <FadeIn>
-              <div className="inline-flex items-center gap-2 bg-white border border-border rounded-full px-4 py-1.5 pl-2 mb-[22px] shadow-s1">
-                <div className="w-5 h-5 rounded-full bg-gradient-to-br from-teal to-navy flex items-center justify-center text-[11px]">
-                  <svg viewBox="0 0 16 16" fill="none" className="w-3 h-3">
-                    <path d="M8 1l1.8 4.2L14 6.8l-3.2 2.7.9 4.5L8 11.8 4.3 14l.9-4.5L2 6.8l4.2-1.6L8 1z" fill="white" />
-                  </svg>
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 100);
+    return () => clearTimeout(t);
+  }, []);
+
+  return (
+    <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-[#0D1B2A]">
+      {/* Radial glows */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 50% at 30% 20%, rgba(27,108,168,0.15) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 70% 80%, rgba(10,191,188,0.08) 0%, transparent 55%)",
+        }}
+      />
+
+      {/* Grid overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none opacity-[0.04]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+          maskImage:
+            "radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 75%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 75%)",
+        }}
+      />
+
+      <div className="relative max-w-wrap mx-auto px-9 py-[160px] pb-[100px] text-center">
+        {/* Feature pills */}
+        <div className="flex flex-col items-center gap-3 mb-12">
+          <div className="flex items-center gap-3 flex-wrap justify-center">
+            {pills.slice(0, 2).map((pill, i) => (
+              <div
+                key={pill.word}
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm"
+                style={{
+                  opacity: visible ? 1 : 0,
+                  transform: visible ? "translateY(0)" : "translateY(12px)",
+                  transition: `opacity 0.5s ease ${i * 0.12}s, transform 0.5s ease ${i * 0.12}s`,
+                }}
+              >
+                <div
+                  className="w-[26px] h-[26px] rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: `${pill.color}22` }}
+                >
+                  <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: pill.color }} />
                 </div>
-                <span className="text-[13px] font-medium text-t2">
-                  <strong className="text-navy">Introducing:</strong> The first intelligent operating system built for childcare centers
+                <span className="text-sm font-medium text-white/65">
+                  {pill.word} <span className="text-teal font-semibold">Wise</span>
                 </span>
               </div>
-            </FadeIn>
-
-            <FadeIn delay={1}>
-              <h1 className="font-heading text-[clamp(36px,5vw,62px)] font-semibold text-navy leading-[1.08] tracking-tight mb-[22px]">
-                The first intelligent<br />operating system<br />built for <em className="italic text-teal">childcare.</em>
-              </h1>
-            </FadeIn>
-
-            <FadeIn delay={2}>
-              <p className="text-lg text-t2 leading-[1.75] mb-9 max-w-[460px]">
-                While you lead your center, ChildWise AI is building your schedule, guiding your teachers, tracking every required CEU — with accredited training built right in, no separate subscription — documenting child development, and forecasting your enrollment. All at once. All in one platform. Nothing like it exists.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={3}>
-              <div className="flex items-center gap-3.5 flex-wrap">
-                <Link
-                  href="https://app.childwisesoftware.com/login"
-                  className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-white hover:bg-teal-lt hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(13,143,171,.35)]"
-                >
-                  Start Free Trial →
-                </Link>
-                <Link
-                  href="https://app.childwisesoftware.com/login"
-                  className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-navy bg-transparent text-navy hover:bg-navy hover:text-white hover:-translate-y-px"
-                >
-                  See a Demo
-                </Link>
-              </div>
-            </FadeIn>
-
-            <FadeIn delay={4}>
-              <div className="flex items-center gap-3.5 mt-[34px] pt-[30px] border-t border-border">
-                <div className="flex">
-                  {["S", "M", "J", "T", "+"].map((letter, i) => (
-                    <div
-                      key={i}
-                      className="w-[30px] h-[30px] rounded-full border-2 border-white bg-teal-pale flex items-center justify-center text-[11px] font-bold text-teal"
-                      style={{ marginLeft: i === 0 ? 0 : "-8px" }}
-                    >
-                      {letter}
-                    </div>
-                  ))}
-                </div>
-                <div className="text-[13px] text-t3">
-                  <strong className="text-t1 font-semibold">500+ directors</strong> — one platform that actually thinks
-                </div>
-              </div>
-            </FadeIn>
+            ))}
           </div>
-
-          {/* Right column - Dashboard mockup */}
-          <FadeIn delay={2} className="relative hidden lg:block">
-            <div className="bg-white border border-border rounded-[20px] shadow-s4 overflow-hidden">
-              {/* Browser bar */}
-              <div className="bg-navy px-[18px] py-[13px] flex items-center gap-2.5">
-                <div className="flex gap-[5px]">
-                  <div className="w-[9px] h-[9px] rounded-full bg-[#ff5f57]" />
-                  <div className="w-[9px] h-[9px] rounded-full bg-[#febc2e]" />
-                  <div className="w-[9px] h-[9px] rounded-full bg-[#28c840]" />
+          <div className="flex items-center gap-3 flex-wrap justify-center">
+            {pills.slice(2).map((pill, i) => (
+              <div
+                key={pill.word}
+                className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm"
+                style={{
+                  opacity: visible ? 1 : 0,
+                  transform: visible ? "translateY(0)" : "translateY(12px)",
+                  transition: `opacity 0.5s ease ${(i + 2) * 0.12}s, transform 0.5s ease ${(i + 2) * 0.12}s`,
+                }}
+              >
+                <div
+                  className="w-[26px] h-[26px] rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: `${pill.color}22` }}
+                >
+                  <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: pill.color }} />
                 </div>
-                <span className="text-xs text-white/[.45] ml-1.5">childwisesoftware.com — Dashboard</span>
+                <span className="text-sm font-medium text-white/65">
+                  {pill.word} <span className="text-teal font-semibold">Wise</span>
+                </span>
               </div>
+            ))}
+          </div>
+        </div>
 
-              <div className="flex">
-                {/* Sidebar */}
-                <div className="w-[52px] bg-navy flex flex-col items-center py-3.5 gap-1.5 shrink-0">
-                  {[
-                    { icon: "🏠", active: true },
-                    { icon: "👶", active: false },
-                    { icon: "📅", active: false },
-                    { icon: "👥", active: false },
-                    { icon: "💰", active: false },
-                    { icon: "🤖", active: false },
-                  ].map((item, i) => (
-                    <div
-                      key={i}
-                      className={`w-[33px] h-[33px] rounded-lg flex items-center justify-center text-sm cursor-pointer ${
-                        item.active ? "bg-teal text-white" : "text-white/40"
-                      }`}
-                    >
-                      {item.icon}
-                    </div>
-                  ))}
-                </div>
+        {/* Welcome label */}
+        <div
+          className="text-[11px] font-semibold tracking-[.2em] uppercase text-white/40 mb-4"
+          style={{
+            opacity: visible ? 1 : 0,
+            transition: "opacity 0.6s ease 0.5s",
+          }}
+        >
+          Welcome to
+        </div>
 
-                {/* Main content */}
-                <div className="flex-1 p-4 bg-[#f9f8f6] min-h-[390px]">
-                  <div className="text-xs font-semibold text-navy mb-1">Good morning, Director Sarah 👋</div>
-                  <div className="text-[10px] text-t3 mb-3">Thursday, March 5 · Sunny Sprouts Academy</div>
+        {/* Headline */}
+        <h1
+          className="font-heading text-[clamp(48px,7vw,88px)] font-bold leading-[1.05] tracking-tight mb-5"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(16px)",
+            transition: "opacity 0.7s ease 0.55s, transform 0.7s ease 0.55s",
+          }}
+        >
+          <span className="inline-flex">
+            <span className="text-white">Child</span>
+            <span className="text-teal">Wise</span>
+          </span>
+        </h1>
 
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-[7px] mb-3">
-                    {[
-                      { num: "47", label: "Enrolled", badge: "↑ 3", badgeColor: "bg-[#e8f9f0] text-[#15803d]" },
-                      { num: "94%", label: "Attendance", badge: "44 in", badgeColor: "bg-teal-pale text-teal" },
-                      { num: "12", label: "Staff today", badge: "2 pending", badgeColor: "bg-amber-pale text-[#c05c00]" },
-                    ].map((stat) => (
-                      <div key={stat.label} className="bg-white border border-border rounded-[9px] p-2.5">
-                        <div className="font-heading text-xl font-semibold text-navy">{stat.num}</div>
-                        <div className="text-[10px] text-t3 mt-px">{stat.label}</div>
-                        <span className={`inline-block text-[9px] px-1.5 py-0.5 rounded-full font-bold mt-1 ${stat.badgeColor}`}>
-                          {stat.badge}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+        {/* Subheading */}
+        <p
+          className="text-lg text-white/50 leading-[1.7] max-w-[520px] mx-auto mb-10"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(12px)",
+            transition: "opacity 0.6s ease 0.7s, transform 0.6s ease 0.7s",
+          }}
+        >
+          The first intelligent operating system built for childcare centers.
+          AI scheduling, accredited training, observations, and predictive
+          enrollment — all in one platform.
+        </p>
 
-                  {/* AI Alert */}
-                  <div className="bg-gradient-to-br from-navy to-[#2a5298] rounded-[9px] px-[13px] py-2.5 flex items-center gap-2 mb-2">
-                    <span className="text-sm">🤖</span>
-                    <span className="text-[11px] text-white/85 flex-1">
-                      <em className="not-italic font-semibold text-white">3 staff licenses expire in 14 days.</em> Training auto-assigned.
-                    </span>
-                    <span className="text-[9px] bg-teal text-white px-[7px] py-[3px] rounded-full font-bold whitespace-nowrap">Review →</span>
-                  </div>
+        {/* CTA buttons */}
+        <div
+          className="flex items-center justify-center gap-3.5 flex-wrap mb-14"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(10px)",
+            transition: "opacity 0.6s ease 0.85s, transform 0.6s ease 0.85s",
+          }}
+        >
+          <Link
+            href="https://app.childwisesoftware.com/login"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-body text-base font-semibold no-underline bg-teal text-ink border-2 border-teal transition-all duration-200 hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_28px_rgba(10,191,188,.3)]"
+          >
+            Start Free Trial
+          </Link>
+          <a
+            href="#ai-os"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-body text-base font-semibold no-underline border-2 border-white/15 bg-white/[0.05] text-white/80 transition-all duration-200 hover:bg-white/10 hover:border-white/25 hover:-translate-y-px"
+          >
+            See how it works
+          </a>
+        </div>
 
-                  {/* Schedule mini */}
-                  <div className="bg-white border border-border rounded-[9px] p-2.5">
-                    <div className="text-[9px] font-bold text-t3 uppercase tracking-wider mb-[7px]">
-                      <svg viewBox="0 0 16 16" fill="none" className="w-3 h-3 inline mr-1">
-                        <path d="M8 1l1.8 4.2L14 6.8l-3.2 2.7.9 4.5L8 11.8 4.3 14l.9-4.5L2 6.8l4.2-1.6L8 1z" fill="#0D8FAB" />
-                      </svg>
-                      Auto-Scheduled · This Week
-                    </div>
-                    {[
-                      { name: "Ms. Johnson", shift: "Mon–Thu · 7am–3pm ✓", color: "bg-teal-pale text-teal" },
-                      { name: "Mr. Torres", shift: "Mon–Thu · 11am–6pm ✓", color: "bg-[rgba(27,58,107,.08)] text-navy" },
-                      { name: "Ms. Lee", shift: "Friday · Confirm shift?", color: "bg-[#fef9ec] text-[#c05c00] border border-dashed border-[rgba(232,134,10,.5)]" },
-                    ].map((row) => (
-                      <div key={row.name} className="flex items-center gap-[5px] mb-1">
-                        <span className="text-[10px] text-t2 font-medium w-[68px] shrink-0">{row.name}</span>
-                        <div className={`flex-1 h-5 rounded-[5px] flex items-center px-[7px] text-[9px] font-bold ${row.color}`}>
-                          {row.shift}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+        {/* Proof stats */}
+        <div
+          className="flex items-center justify-center gap-8 sm:gap-12"
+          style={{
+            opacity: visible ? 1 : 0,
+            transition: "opacity 0.6s ease 1s",
+          }}
+        >
+          {stats.map((stat, i) => (
+            <div key={stat.label} className="flex items-center gap-8 sm:gap-12">
+              {i > 0 && <div className="w-px h-5 bg-white/10 -ml-4 sm:-ml-6" />}
+              <div className="text-center">
+                <div className="font-heading text-xl font-bold text-teal">{stat.num}</div>
+                <div className="text-[11px] text-white/35 mt-0.5">{stat.label}</div>
               </div>
             </div>
-
-            {/* Floating pills */}
-            <div
-              className="absolute top-3.5 right-[-18px] bg-white border border-border rounded-full px-[13px] py-[7px] flex items-center gap-[7px] shadow-s2 text-xs font-semibold text-t1 whitespace-nowrap"
-              style={{ animation: "flt 3s ease-in-out infinite" }}
-            >
-              <div className="w-[7px] h-[7px] rounded-full bg-teal" />
-              Schedule auto-built ✓
-            </div>
-            <div
-              className="absolute bottom-[85px] right-[-24px] bg-white border border-border rounded-full px-[13px] py-[7px] flex items-center gap-[7px] shadow-s2 text-xs font-semibold text-t1 whitespace-nowrap"
-              style={{ animation: "flt 3s ease-in-out infinite", animationDelay: "-1.2s" }}
-            >
-              <div className="w-[7px] h-[7px] rounded-full bg-amber" />
-              Staff ratio: compliant
-            </div>
-            <div
-              className="absolute bottom-[18px] left-[-20px] bg-white border border-border rounded-full px-[13px] py-[7px] flex items-center gap-[7px] shadow-s2 text-xs font-semibold text-t1 whitespace-nowrap"
-              style={{ animation: "flt 3s ease-in-out infinite", animationDelay: "-2.1s" }}
-            >
-              <div className="w-[7px] h-[7px] rounded-full bg-[#4ade80]" />
-              CDA progress: 72%
-            </div>
-          </FadeIn>
+          ))}
         </div>
       </div>
     </section>

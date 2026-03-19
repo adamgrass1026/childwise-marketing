@@ -10,21 +10,20 @@ const scheduleRows = [
 ];
 
 const cellColors: Record<string, string> = {
-  t: "bg-teal-pale text-teal",
-  n: "bg-[rgba(27,58,107,.08)] text-navy",
-  a: "bg-amber-pale text-amber",
+  t: "bg-mist text-teal",
+  n: "bg-[rgba(27,108,168,.08)] text-ink",
+  a: "bg-[#fef3e2] text-[#E8860A]",
   p: "bg-[#fef9ec] text-[#c05c00] border border-dashed border-[rgba(232,134,10,.5)]",
   off: "bg-[#f5f4f2] text-[#bbb]",
 };
 
 export default function Scheduler() {
   return (
-    <section className="py-24 bg-navy relative overflow-hidden" id="sched">
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_55%_70%_at_100%_50%,rgba(13,143,171,.18)_0%,transparent_55%),radial-gradient(ellipse_35%_40%_at_0%_5%,rgba(255,255,255,.03)_0%,transparent_50%)]" />
+    <section className="py-24 bg-ink relative overflow-hidden" id="sched">
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_55%_70%_at_100%_50%,rgba(10,191,188,.15)_0%,transparent_55%),radial-gradient(ellipse_35%_40%_at_0%_5%,rgba(255,255,255,.03)_0%,transparent_50%)]" />
 
       <div className="max-w-wrap mx-auto px-9">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative">
-          {/* Left text */}
           <div>
             <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-white/90 px-3.5 py-[5px] bg-white/[.12] border border-white/25 rounded-full mb-[18px]">
               <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5">
@@ -47,7 +46,7 @@ export default function Scheduler() {
               ].map((item, i) => (
                 <FadeIn key={item.title} delay={i as 0 | 1 | 2}>
                   <div className="flex gap-[13px] items-start p-[18px] bg-white/[.06] border border-white/[.09] rounded-[13px] transition-all duration-200 hover:bg-white/10 hover:border-white/15">
-                    <div className="w-10 h-10 rounded-[10px] bg-[rgba(13,143,171,.25)] flex items-center justify-center text-[19px] shrink-0">
+                    <div className="w-10 h-10 rounded-[10px] bg-[rgba(10,191,188,.2)] flex items-center justify-center text-[19px] shrink-0">
                       {item.icon}
                     </div>
                     <div>
@@ -60,56 +59,39 @@ export default function Scheduler() {
             </div>
 
             <div className="flex gap-[13px] mt-8 flex-wrap">
-              <Link
-                href="https://app.childwisesoftware.com/login"
-                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-white hover:bg-teal-lt hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(13,143,171,.35)]"
-              >
+              <Link href="https://app.childwisesoftware.com/login" className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-ink hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(10,191,188,.3)]">
                 See Scheduling Live
               </Link>
-              <Link
-                href="https://app.childwisesoftware.com/login"
-                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:-translate-y-px"
-              >
+              <Link href="https://app.childwisesoftware.com/login" className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:-translate-y-px">
                 Start Free Trial
               </Link>
             </div>
           </div>
 
-          {/* Right card */}
           <FadeIn>
             <div className="bg-white rounded-[20px] overflow-hidden shadow-[0_28px_72px_rgba(0,0,0,.28)]">
-              {/* Header */}
-              <div className="bg-cream border-b border-border px-[18px] py-3.5 flex items-center justify-between">
-                <div className="text-[13px] font-semibold text-navy">📅 Week of March 3 — Sunny Sprouts</div>
-                <div className="text-[10px] bg-teal-pale text-teal px-[9px] py-[3px] rounded-full font-bold flex items-center gap-1">
+              <div className="bg-[#F0F7FC] border-b border-border px-[18px] py-3.5 flex items-center justify-between">
+                <div className="text-[13px] font-semibold text-ink">📅 Week of March 3 — Sunny Sprouts</div>
+                <div className="text-[10px] bg-mist text-teal px-[9px] py-[3px] rounded-full font-bold flex items-center gap-1">
                   <svg viewBox="0 0 16 16" fill="none" className="w-2.5 h-2.5">
-                    <path d="M8 1l1.8 4.2L14 6.8l-3.2 2.7.9 4.5L8 11.8 4.3 14l.9-4.5L2 6.8l4.2-1.6L8 1z" fill="#0D8FAB" />
+                    <path d="M8 1l1.8 4.2L14 6.8l-3.2 2.7.9 4.5L8 11.8 4.3 14l.9-4.5L2 6.8l4.2-1.6L8 1z" fill="#0ABFBC" />
                   </svg>
                   Auto-generated
                 </div>
               </div>
 
-              {/* Schedule grid */}
               <div className="p-[18px]">
-                {/* Day headers */}
                 <div className="grid grid-cols-[70px_repeat(5,1fr)] gap-[5px] mb-[5px]">
                   <div />
                   {["Mon", "Tue", "Wed", "Thu", "Fri"].map((d) => (
-                    <div key={d} className="text-[10px] font-bold text-t3 text-center uppercase tracking-wider">
-                      {d}
-                    </div>
+                    <div key={d} className="text-[10px] font-bold text-slate/60 text-center uppercase tracking-wider">{d}</div>
                   ))}
                 </div>
-
-                {/* Staff rows */}
                 {scheduleRows.map((row) => (
                   <div key={row.name} className="grid grid-cols-[70px_repeat(5,1fr)] gap-[5px] mb-1 items-center">
-                    <div className="text-[11px] font-medium text-t2">{row.name}</div>
+                    <div className="text-[11px] font-medium text-slate">{row.name}</div>
                     {row.cells.map((cell, ci) => (
-                      <div
-                        key={ci}
-                        className={`h-8 rounded-md flex items-center justify-center text-[9px] font-bold ${cellColors[cell.c]}`}
-                      >
+                      <div key={ci} className={`h-8 rounded-md flex items-center justify-center text-[9px] font-bold ${cellColors[cell.c]}`}>
                         {cell.t}
                       </div>
                     ))}
@@ -117,24 +99,22 @@ export default function Scheduler() {
                 ))}
               </div>
 
-              {/* Footer */}
-              <div className="flex items-center gap-[7px] px-[18px] py-3 border-t border-border bg-[#fafaf8]">
-                <span className="text-[10px] font-bold px-[9px] py-[3px] rounded-full bg-teal-pale text-teal">
+              <div className="flex items-center gap-[7px] px-[18px] py-3 border-t border-border bg-[#fafafa]">
+                <span className="text-[10px] font-bold px-[9px] py-[3px] rounded-full bg-mist text-teal">
                   <svg viewBox="0 0 16 16" fill="none" className="w-2.5 h-2.5 inline mr-1">
-                    <path d="M8 1l1.8 4.2L14 6.8l-3.2 2.7.9 4.5L8 11.8 4.3 14l.9-4.5L2 6.8l4.2-1.6L8 1z" fill="#0D8FAB" />
+                    <path d="M8 1l1.8 4.2L14 6.8l-3.2 2.7.9 4.5L8 11.8 4.3 14l.9-4.5L2 6.8l4.2-1.6L8 1z" fill="#0ABFBC" />
                   </svg>
                   Auto-generated
                 </span>
-                <span className="text-[10px] font-bold px-[9px] py-[3px] rounded-full bg-amber-pale text-amber">
+                <span className="text-[10px] font-bold px-[9px] py-[3px] rounded-full bg-[#fef3e2] text-[#E8860A]">
                   2 need confirm
                 </span>
-                <button className="ml-auto px-4 py-[7px] bg-navy text-white border-none rounded-[7px] text-[11px] font-bold cursor-pointer font-body transition-colors hover:bg-navy-mid">
+                <button className="ml-auto px-4 py-[7px] bg-ink text-white border-none rounded-[7px] text-[11px] font-bold cursor-pointer font-body transition-colors hover:bg-ink-mid">
                   Confirm All →
                 </button>
               </div>
             </div>
 
-            {/* Ratio info bar */}
             <div className="mt-3.5 bg-white/[.06] border border-white/10 rounded-xl px-4 py-[13px] flex gap-[9px] items-center">
               <span className="text-[17px]">📊</span>
               <div>

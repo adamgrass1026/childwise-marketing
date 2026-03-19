@@ -17,12 +17,12 @@ export default function ProofStrip() {
             <div key={stat.label} className="contents">
               <FadeIn delay={i as 0 | 1 | 2 | 3 | 4}>
                 <div className="flex items-center gap-[9px]">
-                  <div className="w-8 h-8 rounded-lg bg-teal-pale flex items-center justify-center text-base">
+                  <div className="w-8 h-8 rounded-lg bg-mist flex items-center justify-center text-base">
                     {stat.icon}
                   </div>
                   <div>
-                    <div className="font-heading text-xl font-semibold text-navy leading-none">{stat.num}</div>
-                    <div className="text-[11px] text-t3">{stat.label}</div>
+                    <div className="font-heading text-xl font-semibold text-ink leading-none">{stat.num}</div>
+                    <div className="text-[11px] text-slate/60">{stat.label}</div>
                   </div>
                 </div>
               </FadeIn>

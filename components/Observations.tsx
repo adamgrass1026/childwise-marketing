@@ -26,42 +26,42 @@ const points = [
 
 const milestones = [
   { dot: "bg-[#4ade80]", text: "Cooperative play with peers (Social-Emotional 3–4yr)", tag: "✓ Confirmed", tagStyle: "bg-[rgba(74,222,128,.15)] text-[#4ade80] border border-[rgba(74,222,128,.3)]" },
-  { dot: "bg-amber-lt", text: "Sustained attention 10+ min (Cognitive)", tag: "Review →", tagStyle: "bg-[rgba(232,134,10,.2)] text-[#f5b144] border border-[rgba(232,134,10,.3)]" },
+  { dot: "bg-[#f5a030]", text: "Sustained attention 10+ min (Cognitive)", tag: "Review →", tagStyle: "bg-[rgba(232,134,10,.2)] text-[#f5b144] border border-[rgba(232,134,10,.3)]" },
   { dot: "bg-teal", text: "Color recognition & sorting (Cognitive)", tag: "✓ Confirmed", tagStyle: "bg-[rgba(74,222,128,.15)] text-[#4ade80] border border-[rgba(74,222,128,.3)]" },
   { dot: "bg-teal", text: "Verbal direction with peers (Language 3yr)", tag: "Review →", tagStyle: "bg-[rgba(232,134,10,.2)] text-[#f5b144] border border-[rgba(232,134,10,.3)]" },
 ];
 
 export default function Observations() {
   return (
-    <section className="py-24 bg-white" id="observations">
+    <section className="py-24 bg-[#F0F7FC]" id="observations">
       <div className="max-w-wrap mx-auto px-9">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left text */}
           <div>
-            <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-teal px-3.5 py-[5px] bg-teal-pale border border-[rgba(13,143,171,.2)] rounded-full mb-[18px]">
+            <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-teal px-3.5 py-[5px] bg-mist border border-[rgba(10,191,188,.2)] rounded-full mb-[18px]">
               <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5">
                 <path d="M8 2a5.5 5.5 0 00-2 10.6V14l2-1.5 2 1.5v-1.4A5.5 5.5 0 008 2z" fill="#E8860A" />
               </svg>
               Teachers Will Love This
             </div>
-            <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-navy leading-[1.1] tracking-tight max-w-[500px]">
+            <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-ink leading-[1.1] tracking-tight max-w-[500px]">
               Teachers should be watching children — not writing about them
             </h2>
-            <p className="text-[17px] text-t2 leading-[1.75] mt-3.5 max-w-[500px]">
+            <p className="text-[17px] text-slate leading-[1.75] mt-3.5 max-w-[500px]">
               Snap a photo. Leave a voice note. ChildWise drafts the observation, suggests the developmental milestones, and waits for the teacher to review and confirm every detail. The documentation gets done. The teacher stays present.
             </p>
 
             <div className="flex flex-col gap-5 mt-8">
               {points.map((item, i) => (
                 <FadeIn key={item.title} delay={i as 0 | 1 | 2 | 3}>
-                  <div className="flex gap-3.5 items-start p-[18px] bg-cream border border-border rounded-[13px] transition-all duration-200 hover:shadow-s2 hover:translate-x-1 hover:bg-white">
+                  <div className="flex gap-3.5 items-start p-[18px] bg-white border border-border rounded-[13px] transition-all duration-200 hover:shadow-s2 hover:translate-x-1">
                     <div className="w-10 h-10 rounded-[10px] bg-white border border-border flex items-center justify-center text-[19px] shrink-0 shadow-s1">
                       {item.icon}
                     </div>
                     <div>
-                      <div className="text-[15px] font-semibold text-navy mb-[3px]">{item.title}</div>
+                      <div className="text-[15px] font-semibold text-ink mb-[3px]">{item.title}</div>
                       <div
-                        className="text-[13px] text-t2 leading-[1.55] [&_strong]:text-navy"
+                        className="text-[13px] text-slate leading-[1.55] [&_strong]:text-ink"
                         dangerouslySetInnerHTML={{ __html: item.desc }}
                       />
                     </div>
@@ -73,13 +73,13 @@ export default function Observations() {
             <div className="flex gap-[13px] mt-8 flex-wrap">
               <Link
                 href="https://app.childwisesoftware.com/login"
-                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-white hover:bg-teal-lt hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(13,143,171,.35)]"
+                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-ink hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(10,191,188,.3)]"
               >
                 See Observations in Action
               </Link>
               <Link
                 href="https://app.childwisesoftware.com/login"
-                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-navy bg-transparent text-navy hover:bg-navy hover:text-white hover:-translate-y-px"
+                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-ink bg-transparent text-ink hover:bg-ink hover:text-white hover:-translate-y-px"
               >
                 Start Free Trial
               </Link>
@@ -88,8 +88,8 @@ export default function Observations() {
 
           {/* Right - Observation card */}
           <FadeIn>
-            <div className="bg-navy rounded-[22px] overflow-hidden shadow-s4 relative">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_10%_80%,rgba(13,143,171,.18)_0%,transparent_55%),radial-gradient(ellipse_40%_40%_at_90%_10%,rgba(232,134,10,.1)_0%,transparent_45%)] pointer-events-none" />
+            <div className="bg-ink rounded-[22px] overflow-hidden shadow-s4 relative">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_10%_80%,rgba(10,191,188,.15)_0%,transparent_55%),radial-gradient(ellipse_40%_40%_at_90%_10%,rgba(232,134,10,.1)_0%,transparent_45%)] pointer-events-none" />
 
               {/* Header */}
               <div className="px-5 py-4 border-b border-white/[.09] flex items-center justify-between relative">
@@ -115,10 +115,10 @@ export default function Observations() {
 
                   {/* Blocks */}
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] flex gap-[5px]">
-                    <div className="w-4 h-5 rounded-[3px] bg-amber" />
+                    <div className="w-4 h-5 rounded-[3px] bg-[#E8860A]" />
                     <div className="w-4 h-3.5 rounded-[3px] bg-teal" />
-                    <div className="w-4 h-5 rounded-[3px] bg-amber -mt-1.5" />
-                    <div className="w-4 h-3 rounded-[3px] bg-navy" />
+                    <div className="w-4 h-5 rounded-[3px] bg-[#E8860A] -mt-1.5" />
+                    <div className="w-4 h-3 rounded-[3px] bg-ink" />
                   </div>
 
                   {/* Children */}
@@ -127,7 +127,7 @@ export default function Observations() {
                   <div className="absolute bottom-[26px] right-1/4 w-12 h-12 rounded-full flex items-center justify-center text-[28px] bg-white/[.08]">👧</div>
 
                   {/* Processing badge */}
-                  <div className="absolute top-2.5 right-2.5 flex items-center gap-1.5 bg-[rgba(13,143,171,.3)] border border-[rgba(13,143,171,.4)] rounded-full py-1 px-2.5">
+                  <div className="absolute top-2.5 right-2.5 flex items-center gap-1.5 bg-[rgba(10,191,188,.3)] border border-[rgba(10,191,188,.4)] rounded-full py-1 px-2.5">
                     <div className="w-1.5 h-1.5 rounded-full bg-teal" style={{ animation: "pulse2 1.2s ease-in-out infinite" }} />
                     <span className="text-[10px] text-white/80 font-semibold">AI analyzing…</span>
                   </div>
@@ -183,7 +183,7 @@ export default function Observations() {
                 <span className="text-[11px] text-white/[.55] flex-1">
                   2 of 4 milestones confirmed · <strong className="text-white/80">Teacher approval required before saving</strong>
                 </span>
-                <button className="text-[11px] font-bold py-1.5 px-[13px] rounded-[7px] bg-teal text-white border-none cursor-pointer font-body">
+                <button className="text-[11px] font-bold py-1.5 px-[13px] rounded-[7px] bg-teal text-ink border-none cursor-pointer font-body">
                   Approve &amp; Save →
                 </button>
               </div>

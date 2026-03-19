@@ -40,7 +40,7 @@ const footerColumns = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d1827] text-white pt-[68px] pb-[34px]">
+    <footer className="bg-ink text-white pt-[68px] pb-[34px]">
       <div className="max-w-wrap mx-auto px-9">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-11 mb-14">
           {/* Brand column */}
@@ -52,7 +52,7 @@ export default function Footer() {
                     d="M10 2C7.5 2 5.5 3.8 5.5 6c0 1.4.8 2.6 1.9 3.3C5.5 10 4 11.8 4 14h12c0-2.2-1.5-4-3.4-4.7C13.7 8.6 14.5 7.4 14.5 6 14.5 3.8 12.5 2 10 2z"
                     fill="white"
                   />
-                  <circle cx="16" cy="15" r="3" fill="#0D8FAB" />
+                  <circle cx="16" cy="15" r="3" fill="#0ABFBC" />
                 </svg>
               </div>
               <span className="font-heading text-[19px] font-semibold text-white">
@@ -64,7 +64,7 @@ export default function Footer() {
             </p>
             <a
               href="https://childwiselearning.com"
-              className="inline-flex items-center gap-[7px] px-3.5 py-[9px] bg-[rgba(13,143,171,.13)] border border-[rgba(13,143,171,.27)] rounded-[9px] text-xs font-medium text-[#5dd0e8] no-underline transition-all duration-150 hover:bg-[rgba(13,143,171,.22)]"
+              className="inline-flex items-center gap-[7px] px-3.5 py-[9px] bg-[rgba(10,191,188,.13)] border border-[rgba(10,191,188,.27)] rounded-[9px] text-xs font-medium text-teal no-underline transition-all duration-150 hover:bg-[rgba(10,191,188,.22)]"
             >
               🎓 &nbsp;ChildWise Learning — Accredited CEU &amp; CDA Training →
             </a>

@@ -47,9 +47,9 @@ const cells = [
 
 export default function AiOs() {
   return (
-    <section className="py-24 bg-navy-dk relative overflow-hidden" id="ai-os">
+    <section className="py-24 bg-ink relative overflow-hidden" id="ai-os">
       {/* Background gradients */}
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_60%_at_50%_-10%,rgba(13,143,171,.15)_0%,transparent_55%),radial-gradient(ellipse_40%_40%_at_5%_90%,rgba(232,134,10,.08)_0%,transparent_50%)]" />
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_70%_60%_at_50%_-10%,rgba(10,191,188,.12)_0%,transparent_55%),radial-gradient(ellipse_40%_40%_at_5%_90%,rgba(27,108,168,.08)_0%,transparent_50%)]" />
 
       <div className="max-w-wrap mx-auto px-9">
         <FadeIn>
@@ -71,7 +71,7 @@ export default function AiOs() {
             {cells.map((cell) => (
               <div
                 key={cell.num}
-                className="bg-navy-dk p-7 relative transition-colors duration-200 hover:bg-[#0f2040] group"
+                className="bg-ink p-7 relative transition-colors duration-200 hover:bg-ink-light group"
               >
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-teal to-transparent opacity-0 transition-opacity duration-200 group-hover:opacity-100" />
                 <div className="font-heading text-[13px] font-semibold text-white/20 mb-4 tracking-wider">
@@ -85,7 +85,7 @@ export default function AiOs() {
                   className="text-[13px] text-white/55 leading-[1.65] [&_strong]:text-white/85 [&_strong]:font-medium"
                   dangerouslySetInnerHTML={{ __html: cell.desc }}
                 />
-                <span className="inline-flex items-center gap-[5px] mt-3.5 text-[10px] font-bold tracking-wider uppercase text-teal px-2.5 py-[3px] bg-[rgba(13,143,171,.15)] rounded-full border border-[rgba(13,143,171,.25)]">
+                <span className="inline-flex items-center gap-[5px] mt-3.5 text-[10px] font-bold tracking-wider uppercase text-teal px-2.5 py-[3px] bg-[rgba(10,191,188,.12)] rounded-full border border-[rgba(10,191,188,.25)]">
                   {cell.tag}
                 </span>
               </div>
@@ -95,7 +95,7 @@ export default function AiOs() {
 
         <FadeIn>
           <div className="text-center p-12 bg-white/[.03] border border-white/[.07] rounded-[20px] relative overflow-hidden">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_100%,rgba(13,143,171,.1)_0%,transparent_60%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_50%_100%,rgba(10,191,188,.08)_0%,transparent_60%)]" />
             <p className="font-heading text-[clamp(18px,2.5vw,26px)] font-medium text-white leading-[1.5] mb-1.5 relative">
               All six happened today. In every center running ChildWise.<br />
               <em className="italic text-teal">Without a single director lifting a finger.</em>

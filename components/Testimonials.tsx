@@ -6,7 +6,7 @@ const testimonials = [
     name: "Sarah Mitchell",
     role: "Director · Sunshine Learning Center · Tampa, FL",
     avatar: "S",
-    avatarBg: "bg-teal-pale",
+    avatarBg: "bg-mist",
     avatarColor: "text-teal",
     featured: false,
   },
@@ -24,25 +24,25 @@ const testimonials = [
     name: "Marcus Thompson",
     role: "Director · Bright Futures CDC · Atlanta, GA",
     avatar: "M",
-    avatarBg: "bg-amber-pale",
-    avatarColor: "text-amber",
+    avatarBg: "bg-[#fef3e2]",
+    avatarColor: "text-[#E8860A]",
     featured: false,
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-[#F0F7FC]">
       <div className="max-w-wrap mx-auto px-9">
         <FadeIn>
           <div className="text-center mb-[52px]">
-            <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-teal px-3.5 py-[5px] bg-teal-pale border border-[rgba(13,143,171,.2)] rounded-full mb-[18px]">
+            <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-teal px-3.5 py-[5px] bg-mist border border-[rgba(10,191,188,.2)] rounded-full mb-[18px]">
               From directors like you
             </div>
-            <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-navy leading-[1.1] tracking-tight">
+            <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-ink leading-[1.1] tracking-tight">
               Centers that run better with ChildWise
             </h2>
-            <p className="text-[17px] text-t2 leading-[1.75] mt-3 mx-auto max-w-[480px]">
+            <p className="text-[17px] text-slate leading-[1.75] mt-3 mx-auto max-w-[480px]">
               Real results from directors who made the switch.
             </p>
           </div>
@@ -54,13 +54,13 @@ export default function Testimonials() {
               <div
                 className={`p-7 rounded-card border transition-all duration-200 ${
                   t.featured
-                    ? "bg-gradient-to-br from-navy to-navy-mid border-transparent hover:shadow-s3"
+                    ? "bg-gradient-to-br from-ink to-ink-mid border-transparent hover:shadow-s3"
                     : "bg-white border-border hover:shadow-s3 hover:-translate-y-0.5"
                 }`}
               >
-                <div className={`text-[13px] mb-3 ${t.featured ? "text-white/40" : "text-amber"}`}>★★★★★</div>
+                <div className={`text-[13px] mb-3 ${t.featured ? "text-white/40" : "text-[#E8860A]"}`}>★★★★★</div>
                 <div className={`font-heading text-[32px] leading-none mb-3 ${t.featured ? "text-white/25" : "text-teal"}`}>&ldquo;</div>
-                <p className={`text-[13px] leading-[1.75] italic mb-5 ${t.featured ? "text-white/80" : "text-t2"}`}>
+                <p className={`text-[13px] leading-[1.75] italic mb-5 ${t.featured ? "text-white/80" : "text-slate"}`}>
                   {t.text}
                 </p>
                 <div className="flex items-center gap-2.5">
@@ -68,8 +68,8 @@ export default function Testimonials() {
                     {t.avatar}
                   </div>
                   <div>
-                    <div className={`text-[13px] font-semibold ${t.featured ? "text-white" : "text-t1"}`}>{t.name}</div>
-                    <div className={`text-[11px] ${t.featured ? "text-white/40" : "text-t3"}`}>{t.role}</div>
+                    <div className={`text-[13px] font-semibold ${t.featured ? "text-white" : "text-ink"}`}>{t.name}</div>
+                    <div className={`text-[11px] ${t.featured ? "text-white/40" : "text-slate/60"}`}>{t.role}</div>
                   </div>
                 </div>
               </div>

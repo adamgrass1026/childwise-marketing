@@ -19,8 +19,8 @@ const afterItems = [
 
 export default function BeforeAfter() {
   return (
-    <section className="py-24 bg-navy relative overflow-hidden">
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_50%_60%_at_100%_50%,rgba(13,143,171,.12)_0%,transparent_55%),radial-gradient(ellipse_40%_40%_at_0%_0%,rgba(232,134,10,.07)_0%,transparent_50%)]" />
+    <section className="py-24 bg-ink relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_50%_60%_at_100%_50%,rgba(10,191,188,.1)_0%,transparent_55%),radial-gradient(ellipse_40%_40%_at_0%_0%,rgba(27,108,168,.07)_0%,transparent_50%)]" />
 
       <div className="max-w-wrap mx-auto px-9">
         <FadeIn>
@@ -39,13 +39,11 @@ export default function BeforeAfter() {
 
         <FadeIn>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-[3px] rounded-[20px] overflow-hidden relative">
-            {/* VS badge */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-navy border-2 border-white/15 rounded-full flex items-center justify-center text-[11px] font-extrabold text-white/50 tracking-wider hidden sm:flex">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-ink border-2 border-white/15 rounded-full flex items-center justify-center text-[11px] font-extrabold text-white/50 tracking-wider hidden sm:flex">
               VS
             </div>
 
-            {/* Before column */}
-            <div className="p-8 bg-[#0d1f3a] rounded-t-[20px] sm:rounded-l-[20px] sm:rounded-tr-none">
+            <div className="p-8 bg-ink-mid rounded-t-[20px] sm:rounded-l-[20px] sm:rounded-tr-none">
               <div className="text-[10px] font-extrabold uppercase tracking-[.14em] text-white/30 mb-6 flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-white/20" />
                 Before ChildWise
@@ -63,15 +61,14 @@ export default function BeforeAfter() {
               </div>
             </div>
 
-            {/* After column */}
-            <div className="p-8 bg-gradient-to-br from-[#0a4a5a] to-[#0c3d6b] rounded-b-[20px] sm:rounded-r-[20px] sm:rounded-bl-none">
+            <div className="p-8 bg-gradient-to-br from-[#0a3a4a] to-ink-light rounded-b-[20px] sm:rounded-r-[20px] sm:rounded-bl-none">
               <div className="text-[10px] font-extrabold uppercase tracking-[.14em] text-teal mb-6 flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-teal" />
                 After ChildWise
               </div>
               <div className="flex flex-col gap-3.5">
                 {afterItems.map((item) => (
-                  <div key={item.title} className="flex items-start gap-3 p-3.5 px-4 rounded-xl bg-[rgba(13,143,171,.12)] border border-[rgba(13,143,171,.2)]">
+                  <div key={item.title} className="flex items-start gap-3 p-3.5 px-4 rounded-xl bg-[rgba(10,191,188,.1)] border border-[rgba(10,191,188,.18)]">
                     <div className="text-lg shrink-0 mt-px">{item.icon}</div>
                     <div className="text-sm leading-[1.55] text-white/85">
                       <strong className="block text-[13px] font-bold text-white mb-0.5">{item.title}</strong>
@@ -93,7 +90,7 @@ export default function BeforeAfter() {
             <div className="flex gap-3.5 justify-center flex-wrap">
               <Link
                 href="https://app.childwisesoftware.com/login"
-                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-white hover:bg-teal-lt hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(13,143,171,.35)]"
+                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-ink hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(10,191,188,.3)]"
               >
                 Start Free Trial →
               </Link>

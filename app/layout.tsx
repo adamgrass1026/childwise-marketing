@@ -1,21 +1,19 @@
 import type { Metadata } from "next";
-import { Fraunces, DM_Sans } from "next/font/google";
+import { Sora, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const sora = Sora({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  weight: ["400", "600", "700", "800"],
+  variable: "--font-sora",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"],
 });
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
+  weight: ["300", "400", "500"],
   variable: "--font-dm-sans",
   display: "swap",
-  weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -30,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${sora.variable} ${dmSans.variable}`}>
       <body className="font-body leading-relaxed">{children}</body>
     </html>
   );

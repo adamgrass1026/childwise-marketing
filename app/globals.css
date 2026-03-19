@@ -3,22 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --navy: #1B3A6B;
-  --navy-mid: #243d7a;
-  --navy-dk: #0f2348;
-  --teal: #0D8FAB;
-  --teal-lt: #12a8c7;
-  --teal-pale: #e8f7fa;
-  --cream: #F8F5F0;
-  --cream-dk: #EDE9E2;
-  --amber: #E8860A;
-  --amber-lt: #f5a030;
-  --amber-pale: #fef3e2;
+  --ink: #0D1B2A;
+  --ink-mid: #0F2035;
+  --ink-light: #162840;
+  --primary: #1B6CA8;
+  --primary-mid: #2485C8;
+  --primary-light: #3AABDF;
+  --teal: #0ABFBC;
+  --teal-light: #7EE8E6;
+  --slate: #4A6580;
+  --success: #22C58B;
+  --page-bg: #F0F7FC;
+  --mist: #E8F4FB;
   --white: #fff;
-  --t1: #1a1a2e;
-  --t2: #4a5568;
-  --t3: #718096;
-  --border: #E0DAD2;
+  --border: rgba(27,108,168,0.12);
 }
 
 html {
@@ -26,8 +24,8 @@ html {
 }
 
 body {
-  background: var(--cream);
-  color: var(--t1);
+  background: var(--page-bg);
+  color: var(--ink);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -65,4 +63,10 @@ body {
 @keyframes wave {
   0%, 100% { transform: scaleY(1); }
   50% { transform: scaleY(1.6); }
+}
+
+/* Hero pill stagger animation */
+@keyframes pillIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
 }

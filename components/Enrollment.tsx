@@ -17,21 +17,21 @@ const maxV = 60;
 
 export default function Enrollment() {
   return (
-    <section className="py-24 bg-white" id="enrollment">
+    <section className="py-24 bg-[#F0F7FC]" id="enrollment">
       <div className="max-w-wrap mx-auto px-9">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left text */}
           <div>
-            <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-teal px-3.5 py-[5px] bg-teal-pale border border-[rgba(13,143,171,.2)] rounded-full mb-[18px]">
+            <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-teal px-3.5 py-[5px] bg-mist border border-[rgba(10,191,188,.2)] rounded-full mb-[18px]">
               <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5">
                 <path d="M8 2a5.5 5.5 0 00-2 10.6V14l2-1.5 2 1.5v-1.4A5.5 5.5 0 008 2z" fill="#E8860A" />
               </svg>
               Predictive Intelligence
             </div>
-            <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-navy leading-[1.1] tracking-tight max-w-[480px]">
+            <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-ink leading-[1.1] tracking-tight max-w-[480px]">
               Stop finding out about enrollment gaps after they hit your revenue
             </h2>
-            <p className="text-[17px] text-t2 leading-[1.75] mt-3.5 max-w-[480px]">
+            <p className="text-[17px] text-slate leading-[1.75] mt-3.5 max-w-[480px]">
               ChildWise AI sees what&apos;s coming weeks before it arrives — open spots, aging-out families, seasonal dips. You get the forecast in time to act, not in time to react.
             </p>
 
@@ -43,12 +43,12 @@ export default function Enrollment() {
               ].map((item, i) => (
                 <FadeIn key={item.title} delay={i as 0 | 1 | 2}>
                   <div className="flex gap-[13px] items-start p-[17px] bg-white border border-border rounded-[13px] transition-all duration-200 hover:shadow-s2 hover:translate-x-1">
-                    <div className="w-[38px] h-[38px] rounded-[9px] bg-teal-pale flex items-center justify-center text-lg shrink-0">
+                    <div className="w-[38px] h-[38px] rounded-[9px] bg-mist flex items-center justify-center text-lg shrink-0">
                       {item.icon}
                     </div>
                     <div>
-                      <div className="text-sm font-semibold text-navy mb-[3px]">{item.title}</div>
-                      <div className="text-[13px] text-t2 leading-[1.5]">{item.desc}</div>
+                      <div className="text-sm font-semibold text-ink mb-[3px]">{item.title}</div>
+                      <div className="text-[13px] text-slate leading-[1.5]">{item.desc}</div>
                     </div>
                   </div>
                 </FadeIn>
@@ -58,13 +58,13 @@ export default function Enrollment() {
             <div className="flex gap-[13px] mt-8 flex-wrap">
               <Link
                 href="https://app.childwisesoftware.com/login"
-                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-white hover:bg-teal-lt hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(13,143,171,.35)]"
+                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-ink hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(10,191,188,.3)]"
               >
                 See Enrollment AI
               </Link>
               <Link
                 href="https://app.childwisesoftware.com/login"
-                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-navy bg-transparent text-navy hover:bg-navy hover:text-white hover:-translate-y-px"
+                className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-ink bg-transparent text-ink hover:bg-ink hover:text-white hover:-translate-y-px"
               >
                 Start Free Trial
               </Link>
@@ -77,21 +77,21 @@ export default function Enrollment() {
               {/* Header */}
               <div className="px-5 py-4 border-b border-border flex items-center justify-between">
                 <div>
-                  <div className="text-sm font-semibold text-navy flex items-center gap-[7px]">📈 Enrollment Forecast — Sunny Sprouts</div>
-                  <div className="text-xs text-t3 mt-0.5">Next 9 months · AI-generated · Updated weekly</div>
+                  <div className="text-sm font-semibold text-ink flex items-center gap-[7px]">📈 Enrollment Forecast — Sunny Sprouts</div>
+                  <div className="text-xs text-slate/60 mt-0.5">Next 9 months · AI-generated · Updated weekly</div>
                 </div>
-                <span className="text-[10px] bg-teal-pale text-teal px-[9px] py-[3px] rounded-full font-bold">Live</span>
+                <span className="text-[10px] bg-mist text-teal px-[9px] py-[3px] rounded-full font-bold">Live</span>
               </div>
 
               {/* Chart */}
               <div className="px-5 py-[18px]">
-                <div className="text-[9px] text-t3 mb-[7px] font-bold uppercase tracking-wider">Children enrolled</div>
+                <div className="text-[9px] text-slate/60 mb-[7px] font-bold uppercase tracking-wider">Children enrolled</div>
                 <div className="flex items-end gap-[5px] h-[130px]">
                   {chartData.map((d) => {
                     const pct = (d.v / maxV) * 100;
                     return (
                       <div key={d.m} className="flex-1 flex flex-col items-center gap-1">
-                        <div className="text-[9px] font-bold text-t2">{d.v}</div>
+                        <div className="text-[9px] font-bold text-slate">{d.v}</div>
                         <div className="w-full bg-[#f2f0ed] rounded-t-[5px] relative" style={{ height: `${pct}%` }}>
                           <div
                             className={`w-full rounded-t-[5px] h-full ${
@@ -101,7 +101,7 @@ export default function Enrollment() {
                             }`}
                           />
                         </div>
-                        <div className="text-[9px] text-t3 font-semibold">{d.m}</div>
+                        <div className="text-[9px] text-slate/60 font-semibold">{d.m}</div>
                       </div>
                     );
                   })}
@@ -109,11 +109,11 @@ export default function Enrollment() {
 
                 {/* Legend */}
                 <div className="flex gap-4 mt-3">
-                  <div className="flex items-center gap-[5px] text-[11px] text-t3">
+                  <div className="flex items-center gap-[5px] text-[11px] text-slate/60">
                     <div className="w-[11px] h-[11px] rounded-[3px] bg-teal" />
                     Actual
                   </div>
-                  <div className="flex items-center gap-[5px] text-[11px] text-t3">
+                  <div className="flex items-center gap-[5px] text-[11px] text-slate/60">
                     <div className="w-[11px] h-[11px] rounded-[3px] bg-teal opacity-40 border border-dashed border-teal" />
                     Forecasted
                   </div>
@@ -122,25 +122,25 @@ export default function Enrollment() {
 
               {/* KPIs */}
               <div className="grid grid-cols-3 gap-2 px-5 pb-4">
-                <div className="rounded-[10px] p-3 text-center bg-teal-pale">
+                <div className="rounded-[10px] p-3 text-center bg-mist">
                   <div className="font-heading text-xl font-semibold text-teal">+8</div>
-                  <div className="text-[10px] text-t3 mt-0.5 leading-[1.3]">Projected openings<br />next 60 days</div>
+                  <div className="text-[10px] text-slate/60 mt-0.5 leading-[1.3]">Projected openings<br />next 60 days</div>
                 </div>
-                <div className="rounded-[10px] p-3 text-center bg-amber-pale">
-                  <div className="font-heading text-xl font-semibold text-amber">14</div>
-                  <div className="text-[10px] text-t3 mt-0.5 leading-[1.3]">Waitlisted families<br />ready to enroll</div>
+                <div className="rounded-[10px] p-3 text-center bg-[#fef3e2]">
+                  <div className="font-heading text-xl font-semibold text-[#E8860A]">14</div>
+                  <div className="text-[10px] text-slate/60 mt-0.5 leading-[1.3]">Waitlisted families<br />ready to enroll</div>
                 </div>
                 <div className="rounded-[10px] p-3 text-center bg-[rgba(27,58,107,.06)]">
-                  <div className="font-heading text-xl font-semibold text-navy">$6.2K</div>
-                  <div className="text-[10px] text-t3 mt-0.5 leading-[1.3]">Projected revenue<br />increase · Q2</div>
+                  <div className="font-heading text-xl font-semibold text-ink">$6.2K</div>
+                  <div className="text-[10px] text-slate/60 mt-0.5 leading-[1.3]">Projected revenue<br />increase · Q2</div>
                 </div>
               </div>
 
               {/* AI Insight */}
-              <div className="bg-cream border-t border-border px-[18px] py-[13px] flex gap-2.5 items-center">
+              <div className="bg-[#F0F7FC] border-t border-border px-[18px] py-[13px] flex gap-2.5 items-center">
                 <span className="text-lg shrink-0">🤖</span>
-                <div className="text-xs text-t2 leading-[1.5]">
-                  <strong className="text-navy">AI Insight:</strong> 3 families in Toddler room predicted to age-out by May. Recommends contacting 3 waitlisted toddlers now to avoid a revenue gap.
+                <div className="text-xs text-slate leading-[1.5]">
+                  <strong className="text-ink">AI Insight:</strong> 3 families in Toddler room predicted to age-out by May. Recommends contacting 3 waitlisted toddlers now to avoid a revenue gap.
                 </div>
               </div>
             </div>

@@ -67,23 +67,23 @@ export default function Pricing() {
   const [isAnnual, setIsAnnual] = useState(true);
 
   return (
-    <section className="py-24 bg-cream" id="pricing">
+    <section className="py-24 bg-[#F0F7FC]" id="pricing">
       <div className="max-w-wrap mx-auto px-9">
         <div className="text-center mb-3.5">
-          <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-teal px-3.5 py-[5px] bg-teal-pale border border-[rgba(13,143,171,.2)] rounded-full mb-[18px]">
+          <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-teal px-3.5 py-[5px] bg-mist border border-[rgba(10,191,188,.2)] rounded-full mb-[18px]">
             Simple pricing
           </div>
-          <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-navy leading-[1.1] tracking-tight">
+          <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-ink leading-[1.1] tracking-tight">
             Invest in running a better center
           </h2>
-          <p className="text-[17px] text-t2 leading-[1.75] mt-3 mx-auto max-w-[460px]">
+          <p className="text-[17px] text-slate leading-[1.75] mt-3 mx-auto max-w-[460px]">
             Transparent pricing that scales with you. No hidden fees, no long-term contracts.
           </p>
         </div>
 
         {/* Toggle */}
         <div className="flex items-center justify-center gap-3 my-[26px] mb-12">
-          <span className={`text-sm font-medium ${!isAnnual ? "text-navy font-semibold" : "text-t3"}`}>Monthly</span>
+          <span className={`text-sm font-medium ${!isAnnual ? "text-ink font-semibold" : "text-slate/60"}`}>Monthly</span>
           <div
             className={`w-11 h-6 rounded-xl relative cursor-pointer transition-colors duration-200 bg-teal`}
             onClick={() => setIsAnnual(!isAnnual)}
@@ -94,8 +94,8 @@ export default function Pricing() {
               }`}
             />
           </div>
-          <span className={`text-sm font-medium ${isAnnual ? "text-navy font-semibold" : "text-t3"}`}>Annual</span>
-          <span className="bg-amber text-white text-[11px] font-bold px-[9px] py-[3px] rounded-full">Save 20%</span>
+          <span className={`text-sm font-medium ${isAnnual ? "text-ink font-semibold" : "text-slate/60"}`}>Annual</span>
+          <span className="bg-[#E8860A] text-white text-[11px] font-bold px-[9px] py-[3px] rounded-full">Save 20%</span>
         </div>
 
         {/* Cards */}
@@ -105,12 +105,12 @@ export default function Pricing() {
               key={plan.tier}
               className={`p-8 px-7 rounded-card border relative transition-all duration-200 ${
                 plan.popular
-                  ? "bg-navy border-transparent shadow-s4 lg:scale-[1.04] hover:shadow-s3"
+                  ? "bg-ink border-transparent shadow-s4 lg:scale-[1.04] hover:shadow-s3"
                   : "bg-white border-border hover:shadow-s3"
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-teal text-white text-[10px] font-extrabold px-[13px] py-1 rounded-full whitespace-nowrap tracking-wider uppercase">
+                <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-teal text-ink text-[10px] font-extrabold px-[13px] py-1 rounded-full whitespace-nowrap tracking-wider uppercase">
                   MOST POPULAR
                 </div>
               )}
@@ -118,13 +118,13 @@ export default function Pricing() {
                 {plan.tier}
               </div>
               <div className="flex items-baseline gap-[3px] mb-[5px]">
-                <span className={`text-xl font-semibold ${plan.popular ? "text-white" : "text-navy"} mt-[5px]`}>$</span>
-                <span className={`font-heading text-[46px] font-semibold leading-none tracking-tight ${plan.popular ? "text-white" : "text-navy"}`}>
+                <span className={`text-xl font-semibold ${plan.popular ? "text-white" : "text-ink"} mt-[5px]`}>$</span>
+                <span className={`font-heading text-[46px] font-semibold leading-none tracking-tight ${plan.popular ? "text-white" : "text-ink"}`}>
                   {isAnnual ? plan.annual : plan.monthly}
                 </span>
-                <span className={`text-[13px] ${plan.popular ? "text-white/40" : "text-t3"}`}>/mo</span>
+                <span className={`text-[13px] ${plan.popular ? "text-white/40" : "text-slate/60"}`}>/mo</span>
               </div>
-              <p className={`text-[13px] leading-[1.5] mb-[22px] ${plan.popular ? "text-white/60" : "text-t2"}`}>
+              <p className={`text-[13px] leading-[1.5] mb-[22px] ${plan.popular ? "text-white/60" : "text-slate"}`}>
                 {plan.desc}
               </p>
               <div className={`h-px mb-5 ${plan.popular ? "bg-white/10" : "bg-border"}`} />
@@ -133,7 +133,7 @@ export default function Pricing() {
                   const text = typeof f === "string" ? f : f.text;
                   const bold = typeof f !== "string" && f.bold;
                   return (
-                    <li key={fi} className={`flex items-start gap-2 text-[13px] ${plan.popular ? "text-white/80" : "text-t2"}`}>
+                    <li key={fi} className={`flex items-start gap-2 text-[13px] ${plan.popular ? "text-white/80" : "text-slate"}`}>
                       <span className={`text-[13px] shrink-0 mt-px ${plan.popular ? "text-[#4dd6ee]" : "text-teal"}`}>
                         <svg viewBox="0 0 12 12" fill="none" className="w-3 h-3">
                           <path d="M2.5 6l2.5 2.5 4.5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -148,8 +148,8 @@ export default function Pricing() {
                 href={plan.ctaHref}
                 className={`block w-full py-3 rounded-[9px] font-body text-sm font-bold cursor-pointer transition-all duration-200 text-center no-underline border-2 ${
                   plan.popular
-                    ? "bg-teal text-white border-teal hover:bg-teal-lt hover:shadow-[0_8px_24px_rgba(13,143,171,.4)]"
-                    : "bg-transparent text-teal border-teal hover:bg-teal hover:text-white"
+                    ? "bg-teal text-ink border-teal hover:bg-teal-light hover:shadow-[0_8px_24px_rgba(10,191,188,.4)]"
+                    : "bg-transparent text-teal border-teal hover:bg-teal hover:text-ink"
                 }`}
               >
                 {plan.cta}
@@ -158,7 +158,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        <p className="text-center mt-[26px] text-[13px] text-t3">
+        <p className="text-center mt-[26px] text-[13px] text-slate/60">
           All plans include a 14-day free trial · No credit card required · Cancel anytime
         </p>
       </div>
