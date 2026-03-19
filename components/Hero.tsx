@@ -51,12 +51,12 @@ export default function Hero() {
 
       <div className="relative max-w-wrap mx-auto px-9 py-[160px] pb-[100px] text-center">
         {/* Feature pills */}
-        <div className="flex flex-col items-center gap-3 mb-12">
-          <div className="flex items-center gap-3 flex-wrap justify-center">
+        <div className="flex flex-col items-center gap-3.5 mb-12">
+          <div className="flex items-center gap-3.5 flex-wrap justify-center">
             {pills.slice(0, 2).map((pill, i) => (
               <div
                 key={pill.word}
-                className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm"
+                className="flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/[0.1] bg-white/[0.06] backdrop-blur-sm"
                 style={{
                   opacity: visible ? 1 : 0,
                   transform: visible ? "translateY(0)" : "translateY(12px)",
@@ -64,22 +64,22 @@ export default function Hero() {
                 }}
               >
                 <div
-                  className="w-[26px] h-[26px] rounded-full flex items-center justify-center"
+                  className="w-[30px] h-[30px] rounded-full flex items-center justify-center"
                   style={{ backgroundColor: `${pill.color}22` }}
                 >
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: pill.color }} />
+                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: pill.color }} />
                 </div>
-                <span className="text-sm font-medium text-white/65">
+                <span className="text-[15px] font-medium text-white/70">
                   {pill.word} <span className="text-teal font-semibold">Wise</span>
                 </span>
               </div>
             ))}
           </div>
-          <div className="flex items-center gap-3 flex-wrap justify-center">
+          <div className="flex items-center gap-3.5 flex-wrap justify-center">
             {pills.slice(2).map((pill, i) => (
               <div
                 key={pill.word}
-                className="flex items-center gap-2.5 px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm"
+                className="flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/[0.1] bg-white/[0.06] backdrop-blur-sm"
                 style={{
                   opacity: visible ? 1 : 0,
                   transform: visible ? "translateY(0)" : "translateY(12px)",
@@ -87,12 +87,12 @@ export default function Hero() {
                 }}
               >
                 <div
-                  className="w-[26px] h-[26px] rounded-full flex items-center justify-center"
+                  className="w-[30px] h-[30px] rounded-full flex items-center justify-center"
                   style={{ backgroundColor: `${pill.color}22` }}
                 >
-                  <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: pill.color }} />
+                  <div className="w-3 h-3 rounded-full" style={{ backgroundColor: pill.color }} />
                 </div>
-                <span className="text-sm font-medium text-white/65">
+                <span className="text-[15px] font-medium text-white/70">
                   {pill.word} <span className="text-teal font-semibold">Wise</span>
                 </span>
               </div>
