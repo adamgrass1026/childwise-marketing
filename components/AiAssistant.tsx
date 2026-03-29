@@ -3,7 +3,7 @@ import FadeIn from "./FadeIn";
 
 export default function AiAssistant() {
   return (
-    <section className="py-24 bg-[#F0F7FC]" id="ai">
+    <section className="py-24 bg-white" id="ai">
       <div className="max-w-wrap mx-auto px-9">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>

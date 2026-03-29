@@ -22,7 +22,7 @@ const statusColors: Record<string, string> = {
 
 export default function Training() {
   return (
-    <section className="py-24 bg-[#F0F7FC]" id="training">
+    <section className="py-24 bg-white" id="training">
       <div className="max-w-wrap mx-auto px-9">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left text */}

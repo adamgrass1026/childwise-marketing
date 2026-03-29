@@ -78,7 +78,7 @@ export default function Consolidation() {
             <div className="flex flex-col gap-3">
               <div className="text-[10px] font-extrabold uppercase tracking-[.14em] text-teal mb-2 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-teal inline-block" />
-                With ChildWise Professional
+                With ChildWise
               </div>
               <div className="bg-gradient-to-br from-ink to-ink-light rounded-[20px] p-7 shadow-s4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_100%_0%,rgba(10,191,188,.2)_0%,transparent_55%)]" />
@@ -110,12 +110,12 @@ export default function Consolidation() {
                 <div className="flex items-end justify-between pt-[18px] border-t border-white/10 relative">
                   <div className="flex items-baseline gap-1">
                     <span className="text-[22px] font-semibold text-white mt-[5px]">$</span>
-                    <span className="font-heading text-[52px] font-semibold text-white leading-none tracking-tight">149</span>
+                    <span className="font-heading text-[52px] font-semibold text-white leading-none tracking-tight">49</span>
                     <span className="text-sm text-white/50">/mo</span>
                   </div>
                   <div className="text-right">
-                    <div className="text-[11px] text-white/50 mb-0.5">You save at least</div>
-                    <div className="font-heading text-[22px] font-semibold text-success">$90+/mo</div>
+                    <div className="text-[11px] text-white/50 mb-0.5">Launch price · You save</div>
+                    <div className="font-heading text-[22px] font-semibold text-success">$190+/mo</div>
                   </div>
                 </div>
               </div>

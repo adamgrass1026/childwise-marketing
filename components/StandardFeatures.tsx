@@ -13,7 +13,7 @@ const features = [
 
 export default function StandardFeatures() {
   return (
-    <section className="py-24 bg-[#F0F7FC]">
+    <section className="py-24 bg-white">
       <div className="max-w-wrap mx-auto px-9">
         <FadeIn>
           <div className="text-center mb-11">
