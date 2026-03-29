@@ -108,13 +108,20 @@ export default function Consolidation() {
                 </div>
 
                 <div className="flex items-end justify-between pt-[18px] border-t border-white/10 relative">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-[22px] font-semibold text-white mt-[5px]">$</span>
-                    <span className="font-heading text-[52px] font-semibold text-white leading-none tracking-tight">49</span>
-                    <span className="text-sm text-white/50">/mo</span>
+                  <div>
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-white/40 text-sm line-through">$99/mo</span>
+                      <span className="bg-[#E8860A] text-white text-[9px] font-bold px-[7px] py-[2px] rounded-full uppercase tracking-wide">Launch 50% off</span>
+                    </div>
+                    <div className="flex items-baseline gap-1">
+                      <span className="text-[22px] font-semibold text-white mt-[5px]">$</span>
+                      <span className="font-heading text-[52px] font-semibold text-white leading-none tracking-tight">49</span>
+                      <span className="text-sm text-white/50">/mo</span>
+                    </div>
+                    <div className="text-[11px] text-white/40 mt-1">for first 12 months, then $99/mo</div>
                   </div>
                   <div className="text-right">
-                    <div className="text-[11px] text-white/50 mb-0.5">Launch price · You save</div>
+                    <div className="text-[11px] text-white/50 mb-0.5">You save</div>
                     <div className="font-heading text-[22px] font-semibold text-success">$190+/mo</div>
                   </div>
                 </div>
