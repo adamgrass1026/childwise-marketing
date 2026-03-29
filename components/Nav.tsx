@@ -55,10 +55,10 @@ export default function Nav() {
             Sign in
           </a>
           <a
-            href="https://app.childwisesoftware.com/login"
+            href="#book-demo"
             className="inline-flex items-center gap-2 px-[18px] py-[9px] rounded-lg font-body text-[13px] font-semibold cursor-pointer transition-all duration-200 no-underline bg-teal text-ink hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(10,191,188,.3)]"
           >
-            Get Started Free
+            Book a Demo
           </a>
         </div>
       </div>

@@ -15,18 +15,18 @@ export default function CtaBanner() {
           ChildWise gives you back the time, the clarity, and the confidence to actually run it. Hundreds of directors made the switch. Most tell us they wish they&apos;d done it sooner.
         </p>
         <div className="flex items-center justify-center gap-3.5 flex-wrap">
-          <Link
-            href="https://app.childwisesoftware.com/login"
+          <a
+            href="#book-demo"
             className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white bg-white text-ink hover:bg-[#F0F7FC] hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(0,0,0,.12)]"
           >
-            Start Free 14-Day Trial →
-          </Link>
-          <Link
+            Book a Demo →
+          </a>
+          <a
             href="https://app.childwisesoftware.com/login"
             className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:-translate-y-px"
           >
-            Schedule a Demo
-          </Link>
+            Sign In
+          </a>
         </div>
         <p className="mt-[18px] text-[13px] text-white/50">
           No credit card required · Free data migration · Cancel anytime

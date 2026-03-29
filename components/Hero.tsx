@@ -149,12 +149,12 @@ export default function Hero() {
             transition: "opacity 0.6s ease 0.85s, transform 0.6s ease 0.85s",
           }}
         >
-          <Link
-            href="https://app.childwisesoftware.com/login"
+          <a
+            href="#book-demo"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-body text-base font-semibold no-underline bg-teal text-ink border-2 border-teal transition-all duration-200 hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_28px_rgba(10,191,188,.3)]"
           >
-            Start Free Trial
-          </Link>
+            Book a Demo
+          </a>
           <a
             href="#ai-os"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-body text-base font-semibold no-underline border-2 border-white/15 bg-white/[0.05] text-white/80 transition-all duration-200 hover:bg-white/10 hover:border-white/25 hover:-translate-y-px"
