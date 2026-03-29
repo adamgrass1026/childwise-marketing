@@ -19,22 +19,20 @@ const cellColors: Record<string, string> = {
 
 export default function Scheduler() {
   return (
-    <section className="py-24 bg-ink relative overflow-hidden" id="sched">
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_55%_70%_at_100%_50%,rgba(10,191,188,.15)_0%,transparent_55%),radial-gradient(ellipse_35%_40%_at_0%_5%,rgba(255,255,255,.03)_0%,transparent_50%)]" />
-
+    <section className="py-24 bg-[#F0F7FC] relative overflow-hidden" id="sched">
       <div className="max-w-wrap mx-auto px-9">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center relative">
           <div>
-            <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-white/90 px-3.5 py-[5px] bg-white/[.12] border border-white/25 rounded-full mb-[18px]">
+            <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-teal px-3.5 py-[5px] bg-mist border border-[rgba(10,191,188,.2)] rounded-full mb-[18px]">
               <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5">
                 <path d="M8 2a5.5 5.5 0 00-2 10.6V14l2-1.5 2 1.5v-1.4A5.5 5.5 0 008 2z" fill="#E8860A" />
               </svg>
               Game-Changing Feature
             </div>
-            <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-white leading-[1.1] tracking-tight max-w-[480px]">
+            <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-ink leading-[1.1] tracking-tight max-w-[480px]">
               No more Sunday nights rebuilding next week&apos;s schedule
             </h2>
-            <p className="text-[17px] text-white/70 leading-[1.75] mt-3.5 max-w-[480px]">
+            <p className="text-[17px] text-slate leading-[1.75] mt-3.5 max-w-[480px]">
               Parents enter their drop-off and pickup times. ChildWise builds the entire staff schedule automatically — right people, right ratios, zero overtime surprises. You review and confirm in minutes. That&apos;s it.
             </p>
 
@@ -45,13 +43,13 @@ export default function Scheduler() {
                 { icon: "📋", title: "Always ratio-compliant", desc: "ChildWise knows your state's child-to-staff ratio rules. Every schedule is compliant before it reaches your desk." },
               ].map((item, i) => (
                 <FadeIn key={item.title} delay={i as 0 | 1 | 2}>
-                  <div className="flex gap-[13px] items-start p-[18px] bg-white/[.06] border border-white/[.09] rounded-[13px] transition-all duration-200 hover:bg-white/10 hover:border-white/15">
-                    <div className="w-10 h-10 rounded-[10px] bg-[rgba(10,191,188,.2)] flex items-center justify-center text-[19px] shrink-0">
+                  <div className="flex gap-[13px] items-start p-[18px] bg-white border border-border rounded-[13px] shadow-s1 transition-all duration-200 hover:shadow-s2">
+                    <div className="w-10 h-10 rounded-[10px] bg-mist flex items-center justify-center text-[19px] shrink-0">
                       {item.icon}
                     </div>
                     <div>
-                      <div className="text-[15px] font-semibold text-white mb-[3px]">{item.title}</div>
-                      <div className="text-[13px] text-white/65 leading-[1.55]">{item.desc}</div>
+                      <div className="text-[15px] font-semibold text-ink mb-[3px]">{item.title}</div>
+                      <div className="text-[13px] text-slate/70 leading-[1.55]">{item.desc}</div>
                     </div>
                   </div>
                 </FadeIn>
@@ -62,14 +60,14 @@ export default function Scheduler() {
               <a href="#book-demo" className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-ink hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(10,191,188,.3)]">
                 Book a Demo
               </a>
-              <a href="#ai-os" className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:-translate-y-px">
+              <a href="#ai-os" className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-ink bg-transparent text-ink hover:bg-ink hover:text-white hover:-translate-y-px">
                 See How It Works
               </a>
             </div>
           </div>
 
           <FadeIn>
-            <div className="bg-white rounded-[20px] overflow-hidden shadow-[0_28px_72px_rgba(0,0,0,.28)]">
+            <div className="bg-white rounded-[20px] overflow-hidden shadow-[0_28px_72px_rgba(0,0,0,.08)] border border-border">
               <div className="bg-[#F0F7FC] border-b border-border px-[18px] py-3.5 flex items-center justify-between">
                 <div className="text-[13px] font-semibold text-ink">📅 Week of March 3 — Sunny Sprouts</div>
                 <div className="text-[10px] bg-mist text-teal px-[9px] py-[3px] rounded-full font-bold flex items-center gap-1">
@@ -115,11 +113,11 @@ export default function Scheduler() {
               </div>
             </div>
 
-            <div className="mt-3.5 bg-white/[.06] border border-white/10 rounded-xl px-4 py-[13px] flex gap-[9px] items-center">
+            <div className="mt-3.5 bg-white border border-border rounded-xl px-4 py-[13px] flex gap-[9px] items-center shadow-s1">
               <span className="text-[17px]">📊</span>
               <div>
-                <div className="text-xs font-semibold text-white">All rooms: ratio compliant</div>
-                <div className="text-[11px] text-white/45 mt-0.5">Butterfly 1:4 · Rainbow 1:5 · Sunshine 1:6 — within state limits</div>
+                <div className="text-xs font-semibold text-ink">All rooms: ratio compliant</div>
+                <div className="text-[11px] text-slate/60 mt-0.5">Butterfly 1:4 · Rainbow 1:5 · Sunshine 1:6 — within state limits</div>
               </div>
               <div className="ml-auto text-[17px]">✅</div>
             </div>
