@@ -41,6 +41,12 @@ export default function Home() {
       <AiOs />
       <Consolidation />
       <BeforeAfter />
+
+      {/* Divider between dark sections */}
+      <div className="bg-ink">
+        <div className="max-w-[600px] mx-auto h-px bg-gradient-to-r from-transparent via-teal/30 to-transparent" />
+      </div>
+
       <Scheduler />
       <AiAssistant />
       <Observations />
