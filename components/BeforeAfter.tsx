@@ -89,7 +89,7 @@ export default function BeforeAfter() {
             </p>
             <div className="flex gap-3.5 justify-center flex-wrap">
               <a
-                href="#book-demo"
+                href="https://calendly.com/adam-heritagehollowllc/30min"
                 className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-ink hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(10,191,188,.3)]"
               >
                 Book a Demo →
