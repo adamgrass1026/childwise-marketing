@@ -92,7 +92,7 @@ export default function Pricing() {
             </ul>
 
             <a
-              href="https://calendly.com/adam-heritagehollowllc/30min"
+              href="https://calendly.com/adam-childwise/30min"
               className="block w-full py-3.5 rounded-[9px] font-body text-sm font-bold cursor-pointer transition-all duration-200 text-center no-underline border-2 bg-teal text-ink border-teal hover:bg-teal-light hover:shadow-[0_8px_24px_rgba(10,191,188,.4)]"
             >
               Book a Demo

@@ -16,7 +16,7 @@ export default function CtaBanner() {
         </p>
         <div className="flex items-center justify-center gap-3.5 flex-wrap">
           <a
-            href="https://calendly.com/adam-heritagehollowllc/30min"
+            href="https://calendly.com/adam-childwise/30min"
             className="inline-flex items-center gap-2 px-[34px] py-[17px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-white bg-white text-ink hover:bg-[#F0F7FC] hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(0,0,0,.12)]"
           >
             Book a Demo →
