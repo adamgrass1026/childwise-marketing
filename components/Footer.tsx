@@ -112,7 +112,10 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex gap-5">
-            {["Privacy", "Terms", "HIPAA", "Security"].map((link) => (
+            <Link href="/privacy" className="text-xs text-white/30 no-underline hover:text-white/60">
+              Privacy
+            </Link>
+            {["Terms", "HIPAA", "Security"].map((link) => (
               <a key={link} href="#" className="text-xs text-white/30 no-underline hover:text-white/60">
                 {link}
               </a>

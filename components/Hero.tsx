@@ -100,27 +100,19 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Welcome label */}
-        <div
-          className="text-[11px] font-semibold tracking-[.2em] uppercase text-white/40 mb-4"
-          style={{
-            opacity: visible ? 1 : 0,
-            transition: "opacity 0.6s ease 0.5s",
-          }}
-        >
-          Welcome to
-        </div>
-
-        {/* Headline */}
+        {/* Headline — single H1 with primary keyword above brand */}
         <h1
-          className="font-heading text-[clamp(48px,7vw,88px)] font-bold leading-[1.05] tracking-tight mb-5"
+          className="font-heading font-bold leading-[1.05] tracking-tight mb-5"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(16px)",
             transition: "opacity 0.7s ease 0.55s, transform 0.7s ease 0.55s",
           }}
         >
-          <span className="inline-flex">
+          <span className="block text-[11px] sm:text-[13px] font-semibold tracking-[.2em] uppercase text-teal/90 mb-4">
+            AI Childcare Management Software
+          </span>
+          <span className="inline-flex text-[clamp(48px,7vw,88px)]">
             <span className="text-white">Child</span>
             <span className="text-teal">Wise</span>
           </span>
@@ -128,16 +120,16 @@ export default function Hero() {
 
         {/* Subheading */}
         <p
-          className="text-lg text-white/50 leading-[1.7] max-w-[520px] mx-auto mb-10"
+          className="text-lg text-white/55 leading-[1.7] max-w-[560px] mx-auto mb-10"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(12px)",
             transition: "opacity 0.6s ease 0.7s, transform 0.6s ease 0.7s",
           }}
         >
-          The first intelligent operating system built for childcare centers.
-          AI scheduling, accredited training, observations, and predictive
-          enrollment — all in one platform.
+          The intelligent operating system for childcare centers, preschools, and
+          in-home daycares. AI staff scheduling, accredited CEU training,
+          observations, and predictive enrollment — all in one platform.
         </p>
 
         {/* CTA buttons */}

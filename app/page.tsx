@@ -13,44 +13,53 @@ import StandardFeatures from "@/components/StandardFeatures";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
+import Faq from "@/components/Faq";
 import CtaBanner from "@/components/CtaBanner";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 
 export default function Home() {
   return (
     <>
+      <JsonLd />
       <Nav />
-      <Hero />
+      <main>
+        <Hero />
 
-      {/* Wave transition: dark hero → light body */}
-      <div style={{ background: "#0D1B2A", marginTop: "-2px", lineHeight: 0 }}>
-        <svg
-          viewBox="0 0 1440 80"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-          style={{ display: "block", width: "100%" }}
+        {/* Wave transition: dark hero → light body */}
+        <div
+          aria-hidden="true"
+          style={{ background: "#0D1B2A", marginTop: "-2px", lineHeight: 0 }}
         >
-          <path
-            d="M0,0 C360,80 1080,80 1440,0 L1440,80 L0,80 Z"
-            fill="#F0F7FC"
-          />
-        </svg>
-      </div>
+          <svg
+            viewBox="0 0 1440 80"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ display: "block", width: "100%" }}
+          >
+            <path
+              d="M0,0 C360,80 1080,80 1440,0 L1440,80 L0,80 Z"
+              fill="#F0F7FC"
+            />
+          </svg>
+        </div>
 
-      <ProofStrip />
-      <AiOs />
-      <Consolidation />
-      <BeforeAfter />
-      <Scheduler />
-      <AiAssistant />
-      <Observations />
-      <Training />
-      <Enrollment />
-      <StandardFeatures />
-      <HowItWorks />
-      <Testimonials />
-      <Pricing />
-      <CtaBanner />
+        <ProofStrip />
+        <AiOs />
+        <Consolidation />
+        <BeforeAfter />
+        <Scheduler />
+        <AiAssistant />
+        <Observations />
+        <Training />
+        <Enrollment />
+        <StandardFeatures />
+        <HowItWorks />
+        <Testimonials />
+        <Pricing />
+        <Faq />
+        <CtaBanner />
+      </main>
       <Footer />
     </>
   );
