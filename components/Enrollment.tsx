@@ -1,19 +1,5 @@
-import Link from "next/link";
+import Image from "next/image";
 import FadeIn from "./FadeIn";
-
-const chartData = [
-  { m: "Oct", v: 38, act: true },
-  { m: "Nov", v: 41, act: true },
-  { m: "Dec", v: 39, act: true },
-  { m: "Jan", v: 43, act: true },
-  { m: "Feb", v: 44, act: true },
-  { m: "Mar", v: 47, act: true },
-  { m: "Apr", v: 50, act: false },
-  { m: "May", v: 52, act: false },
-  { m: "Jun", v: 55, act: false },
-];
-
-const maxV = 60;
 
 export default function Enrollment() {
   return (
@@ -71,78 +57,17 @@ export default function Enrollment() {
             </div>
           </div>
 
-          {/* Right - Enrollment card */}
+          {/* Right - Enrollment screenshot */}
           <FadeIn>
-            <div className="bg-white border border-border rounded-[22px] overflow-hidden shadow-s3">
-              {/* Header */}
-              <div className="px-5 py-4 border-b border-border flex items-center justify-between">
-                <div>
-                  <div className="text-sm font-semibold text-ink flex items-center gap-[7px]">📈 Enrollment Forecast — Sunny Sprouts</div>
-                  <div className="text-xs text-slate/60 mt-0.5">Next 9 months · AI-generated · Updated weekly</div>
-                </div>
-                <span className="text-[10px] bg-mist text-teal px-[9px] py-[3px] rounded-full font-bold">Live</span>
-              </div>
-
-              {/* Chart */}
-              <div className="px-5 py-[18px]">
-                <div className="text-[9px] text-slate/60 mb-[7px] font-bold uppercase tracking-wider">Children enrolled</div>
-                <div className="flex items-end gap-[5px] h-[130px]">
-                  {chartData.map((d) => {
-                    const pct = (d.v / maxV) * 100;
-                    return (
-                      <div key={d.m} className="flex-1 flex flex-col items-center gap-1">
-                        <div className="text-[9px] font-bold text-slate">{d.v}</div>
-                        <div className="w-full bg-[#f2f0ed] rounded-t-[5px] relative" style={{ height: `${pct}%` }}>
-                          <div
-                            className={`w-full rounded-t-[5px] h-full ${
-                              d.act
-                                ? "bg-teal"
-                                : "bg-teal opacity-[.38] border-2 border-dashed border-teal"
-                            }`}
-                          />
-                        </div>
-                        <div className="text-[9px] text-slate/60 font-semibold">{d.m}</div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Legend */}
-                <div className="flex gap-4 mt-3">
-                  <div className="flex items-center gap-[5px] text-[11px] text-slate/60">
-                    <div className="w-[11px] h-[11px] rounded-[3px] bg-teal" />
-                    Actual
-                  </div>
-                  <div className="flex items-center gap-[5px] text-[11px] text-slate/60">
-                    <div className="w-[11px] h-[11px] rounded-[3px] bg-teal opacity-40 border border-dashed border-teal" />
-                    Forecasted
-                  </div>
-                </div>
-              </div>
-
-              {/* KPIs */}
-              <div className="grid grid-cols-3 gap-2 px-5 pb-4">
-                <div className="rounded-[10px] p-3 text-center bg-mist">
-                  <div className="font-heading text-xl font-semibold text-teal">+8</div>
-                  <div className="text-[10px] text-slate/60 mt-0.5 leading-[1.3]">Projected openings<br />next 60 days</div>
-                </div>
-                <div className="rounded-[10px] p-3 text-center bg-[#fef3e2]">
-                  <div className="font-heading text-xl font-semibold text-[#E8860A]">14</div>
-                  <div className="text-[10px] text-slate/60 mt-0.5 leading-[1.3]">Waitlisted families<br />ready to enroll</div>
-                </div>
-                <div className="rounded-[10px] p-3 text-center bg-[rgba(27,58,107,.06)]">
-                  <div className="font-heading text-xl font-semibold text-ink">$6.2K</div>
-                  <div className="text-[10px] text-slate/60 mt-0.5 leading-[1.3]">Projected revenue<br />increase · Q2</div>
-                </div>
-              </div>
-
-              {/* AI Insight */}
-              <div className="bg-[#F0F7FC] border-t border-border px-[18px] py-[13px] flex gap-2.5 items-center">
-                <span className="text-lg shrink-0">🤖</span>
-                <div className="text-xs text-slate leading-[1.5]">
-                  <strong className="text-ink">AI Insight:</strong> 3 families in Toddler room predicted to age-out by May. Recommends contacting 3 waitlisted toddlers now to avoid a revenue gap.
-                </div>
-              </div>
+            <div className="rounded-[22px] overflow-hidden shadow-s3 border border-border">
+              <Image
+                src="/images/enrollment-overview.png"
+                alt="ChildWise Enrollment Overview showing real-time capacity tracking, predictive enrollment projections, and attendance charts across all classrooms"
+                width={1556}
+                height={756}
+                className="w-full h-auto"
+                priority={false}
+              />
             </div>
           </FadeIn>
         </div>
