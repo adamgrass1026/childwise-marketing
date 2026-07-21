@@ -115,7 +115,13 @@ export default function Footer() {
             <Link href="/privacy" className="text-xs text-white/30 no-underline hover:text-white/60">
               Privacy
             </Link>
-            {["Terms", "HIPAA", "Security"].map((link) => (
+            <Link href="/terms" className="text-xs text-white/30 no-underline hover:text-white/60">
+              Terms
+            </Link>
+            <Link href="/payment-fees" className="text-xs text-white/30 no-underline hover:text-white/60">
+              Payment Fees
+            </Link>
+            {["HIPAA", "Security"].map((link) => (
               <a key={link} href="#" className="text-xs text-white/30 no-underline hover:text-white/60">
                 {link}
               </a>
