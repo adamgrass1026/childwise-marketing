@@ -75,8 +75,12 @@ export default function PrivacyPage() {
               <li>
                 <strong className="text-ink font-semibold">Payment information:</strong>{" "}
                 billing contact and subscription details. Card numbers and bank
-                information are handled directly by our payments partner, Finix, and
-                are never stored on ChildWise servers.
+                account information are handled directly by our payments partner,
+                Finix, and are never stored on ChildWise servers. Business
+                verification information and documents submitted by childcare
+                centers during payment onboarding are collected by and submitted
+                directly to Finix; ChildWise does not receive or store these
+                documents.
               </li>
               <li>
                 <strong className="text-ink font-semibold">Usage information:</strong>{" "}
