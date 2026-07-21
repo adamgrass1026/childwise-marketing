@@ -27,7 +27,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-[15px] text-white/60 mt-4">
-            Last updated: April 9, 2026
+            Last updated: July 21, 2026
           </p>
         </div>
       </section>
@@ -75,7 +75,7 @@ export default function PrivacyPage() {
               <li>
                 <strong className="text-ink font-semibold">Payment information:</strong>{" "}
                 billing contact and subscription details. Card numbers and bank
-                information are handled directly by our payment processor, Square, and
+                information are handled directly by our payments partner, Finix, and
                 are never stored on ChildWise servers.
               </li>
               <li>
@@ -121,8 +121,9 @@ export default function PrivacyPage() {
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
               <li>
-                <strong className="text-ink font-semibold">Square</strong> — processes
-                subscription payments and handles all card data.
+                <strong className="text-ink font-semibold">Finix</strong> — processes
+                subscription and tuition payments and handles all card and bank
+                account data.
               </li>
               <li>
                 <strong className="text-ink font-semibold">Supabase</strong> — hosts
