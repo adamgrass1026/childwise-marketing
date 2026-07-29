@@ -11,8 +11,6 @@ const pills = [
 ];
 
 const stats = [
-  { num: "500+", label: "Centers" },
-  { num: "12K+", label: "Children" },
   { num: "4.9★", label: "Rating" },
 ];
 

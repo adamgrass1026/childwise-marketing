@@ -1,8 +1,6 @@
 import FadeIn from "./FadeIn";
 
 const stats = [
-  { icon: "🏫", num: "500+", label: "Active centers" },
-  { icon: "👶", num: "28K+", label: "Children managed" },
   { icon: "⏱️", num: "12 hrs", label: "Saved per week" },
   { icon: "🎓", num: "2,400+", label: "CEU hours completed" },
   { icon: "✅", num: "100%", label: "License audit pass rate" },
