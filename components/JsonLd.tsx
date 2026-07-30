@@ -66,12 +66,12 @@ const softwareApplication = {
   ],
   offers: {
     "@type": "Offer",
-    price: "49.00",
+    price: "79.99",
     priceCurrency: "USD",
     priceValidUntil: "2027-04-09",
     availability: "https://schema.org/InStock",
     description:
-      "Launch pricing — 50% off the regular $99/month rate for the first 12 months.",
+      "Launch pricing — $79.99/month (regular $99/month) for the first 12 months.",
     url: `${SITE_URL}/#pricing`,
   },
   aggregateRating: {
@@ -91,7 +91,7 @@ export const faqItems = [
   },
   {
     q: "How much does childcare management software like ChildWise cost?",
-    a: "ChildWise is a flat $99 per month per center with all features included. New centers get launch pricing of $49 per month for the first 12 months — a 50% discount with no per-child fees, no contracts, and no hidden add-ons.",
+    a: "ChildWise is a flat $99 per month per center with all features included. New centers get launch pricing of $79.99 per month for the first 12 months — with no per-child fees, no contracts, and no hidden add-ons.",
   },
   {
     q: "Does ChildWise replace Brightwheel, Procare, or Lillio?",

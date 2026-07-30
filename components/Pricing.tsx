@@ -39,7 +39,7 @@ export default function Pricing() {
         <div className="flex justify-center mt-6 mb-10">
           <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#E8860A]/10 border border-[#E8860A]/25">
             <span className="text-[#E8860A] text-sm font-bold">Launch Special</span>
-            <span className="text-slate text-sm">50% off for your first 12 months</span>
+            <span className="text-slate text-sm">Save $19/mo for your first 12 months</span>
           </div>
         </div>
 
@@ -54,15 +54,16 @@ export default function Pricing() {
               {/* Struck-through regular price */}
               <div className="flex items-center justify-center gap-3 mb-1">
                 <span className="text-white/40 text-lg line-through">$99/mo</span>
-                <span className="bg-[#E8860A] text-white text-[11px] font-bold px-[9px] py-[3px] rounded-full">SAVE 50%</span>
+                <span className="bg-[#E8860A] text-white text-[11px] font-bold px-[9px] py-[3px] rounded-full">SAVE $19/MO</span>
               </div>
 
               {/* Launch price */}
               <div className="flex items-baseline justify-center gap-[3px]">
                 <span className="text-xl font-semibold text-white mt-[5px]">$</span>
                 <span className="font-heading text-[56px] font-semibold leading-none tracking-tight text-white">
-                  49
+                  79
                 </span>
+                <span className="font-heading text-[26px] font-semibold text-white">.99</span>
                 <span className="text-[14px] text-white/40">/mo</span>
               </div>
               <p className="text-[13px] text-white/50 mt-1.5">for your first 12 months, then $99/mo</p>
