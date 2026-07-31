@@ -1,74 +1,30 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = "https://childwisesoftware.com";
+const SITE_URL = "https://www.childwisesoftware.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   return [
     {
       url: `${SITE_URL}/`,
-      lastModified,
+      lastModified: new Date("2026-07-30"),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: `${SITE_URL}/#sched`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/#ai`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/#observations`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/#training`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/#enrollment`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/#pricing`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${SITE_URL}/#faq`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
       url: `${SITE_URL}/privacy`,
-      lastModified,
+      lastModified: new Date("2026-07-21"),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${SITE_URL}/terms`,
-      lastModified,
+      lastModified: new Date("2026-07-21"),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${SITE_URL}/payment-fees`,
-      lastModified,
+      lastModified: new Date("2026-07-21"),
       changeFrequency: "yearly",
       priority: 0.3,
     },

@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — ChildWise",
+  title: "Terms of Service",
   description:
     "The Terms of Service governing use of the ChildWise childcare center management platform, including subscriptions and payment processing through Finix.",
   alternates: {
     canonical: "/terms",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "ChildWise",
+    title: "Terms of Service | ChildWise",
+    description:
+      "The Terms of Service governing use of the ChildWise childcare center management platform, including subscriptions and payment processing through Finix.",
+    url: "/terms",
   },
 };
 
@@ -392,7 +401,7 @@ export default function TermsPage() {
               </div>
               <div className="text-ink mt-1">
                 <a
-                  href="https://childwisesoftware.com"
+                  href="https://www.childwisesoftware.com"
                   className="text-teal font-semibold hover:underline"
                 >
                   childwisesoftware.com

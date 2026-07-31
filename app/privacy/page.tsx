@@ -2,9 +2,21 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — ChildWise",
+  title: "Privacy Policy",
   description:
     "How ChildWise collects, uses, and protects information for childcare centers, staff, and families.",
+  alternates: {
+    canonical: "/privacy",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "ChildWise",
+    title: "Privacy Policy | ChildWise",
+    description:
+      "How ChildWise collects, uses, and protects information for childcare centers, staff, and families.",
+    url: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {
@@ -41,7 +53,7 @@ export default function PrivacyPage() {
             communications with families. This Privacy Policy explains what information
             we collect, how we use it, and the choices you have. By using{" "}
             <a
-              href="https://childwisesoftware.com"
+              href="https://www.childwisesoftware.com"
               className="text-teal font-semibold hover:underline"
             >
               childwisesoftware.com
@@ -277,7 +289,7 @@ export default function PrivacyPage() {
               </div>
               <div className="text-ink mt-1">
                 <a
-                  href="https://childwisesoftware.com"
+                  href="https://www.childwisesoftware.com"
                   className="text-teal font-semibold hover:underline"
                 >
                   childwisesoftware.com

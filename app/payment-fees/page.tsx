@@ -2,11 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Payment Processing Fees — ChildWise",
+  title: "Payment Processing Fees",
   description:
     "Disclosure of payment processing fees for tuition and other payments accepted through the ChildWise platform, provided through our payments partner Finix.",
   alternates: {
     canonical: "/payment-fees",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "ChildWise",
+    title: "Payment Processing Fees | ChildWise",
+    description:
+      "Disclosure of payment processing fees for tuition and other payments accepted through the ChildWise platform, provided through our payments partner Finix.",
+    url: "/payment-fees",
   },
 };
 
@@ -146,7 +155,7 @@ export default function PaymentFeesPage() {
               </div>
               <div className="text-ink mt-1">
                 <a
-                  href="https://childwisesoftware.com"
+                  href="https://www.childwisesoftware.com"
                   className="text-teal font-semibold hover:underline"
                 >
                   childwisesoftware.com

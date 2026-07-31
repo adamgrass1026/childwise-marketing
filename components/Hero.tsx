@@ -10,10 +10,6 @@ const pills = [
   { word: "Enroll", color: "#E8860A" },
 ];
 
-const stats = [
-  { num: "4.9★", label: "Rating" },
-];
-
 export default function Hero() {
   const [visible, setVisible] = useState(false);
 
@@ -153,24 +149,6 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Proof stats */}
-        <div
-          className="flex items-center justify-center gap-8 sm:gap-12"
-          style={{
-            opacity: visible ? 1 : 0,
-            transition: "opacity 0.6s ease 1s",
-          }}
-        >
-          {stats.map((stat, i) => (
-            <div key={stat.label} className="flex items-center gap-8 sm:gap-12">
-              {i > 0 && <div className="w-px h-5 bg-white/10 -ml-4 sm:-ml-6" />}
-              <div className="text-center">
-                <div className="font-heading text-xl font-bold text-teal">{stat.num}</div>
-                <div className="text-[11px] text-white/35 mt-0.5">{stat.label}</div>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

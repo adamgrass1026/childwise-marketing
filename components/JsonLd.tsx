@@ -1,4 +1,4 @@
-const SITE_URL = "https://childwisesoftware.com";
+const SITE_URL = "https://www.childwisesoftware.com";
 
 const organization = {
   "@context": "https://schema.org",
@@ -73,13 +73,6 @@ const softwareApplication = {
     description:
       "Launch pricing — $79.99/month (regular $99/month) for the first 12 months.",
     url: `${SITE_URL}/#pricing`,
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    bestRating: "5",
-    worstRating: "1",
-    ratingCount: "37",
   },
   publisher: { "@id": `${SITE_URL}/#organization` },
 };
