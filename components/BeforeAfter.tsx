@@ -14,7 +14,7 @@ const afterItems = [
   { icon: "⚡", title: "Everything documented, instantly", text: "Incident reports, attendance, billing, observations — digital, searchable, audit-ready. An inspector walks in and you open a laptop." },
   { icon: "🛡️", title: "Audits you actually look forward to", text: "Every training hour tracked. Every certification current. AI alerts you weeks before anything lapses. You walk in confident." },
   { icon: "📈", title: "Ahead of enrollment shifts — always", text: "AI predicts openings weeks out, surfaces waitlisted families, and helps you plan staffing before the gap ever hits your revenue." },
-  { icon: "❤️", title: "Back in the classroom where you belong", text: "Directors tell us they spend more time with children and staff in the first month than they had in the previous year." },
+  { icon: "❤️", title: "Back in the classroom where you belong", text: "With scheduling, compliance, and paperwork handled, your time goes back to the children and staff who need you." },
 ];
 
 export default function BeforeAfter() {

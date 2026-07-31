@@ -12,7 +12,7 @@ export default function CtaBanner() {
           The center you imagined when<br />you started is still possible.
         </h2>
         <p className="text-[17px] text-white/75 leading-[1.75] mt-3.5 mx-auto max-w-[510px] mb-[38px]">
-          ChildWise gives you back the time, the clarity, and the confidence to actually run it. Hundreds of directors made the switch. Most tell us they wish they&apos;d done it sooner.
+          ChildWise gives you back the time, the clarity, and the confidence to actually run it.
         </p>
         <div className="flex items-center justify-center gap-3.5 flex-wrap">
           <a
