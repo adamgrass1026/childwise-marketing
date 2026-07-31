@@ -11,7 +11,6 @@ import Training from "@/components/Training";
 import Enrollment from "@/components/Enrollment";
 import StandardFeatures from "@/components/StandardFeatures";
 import HowItWorks from "@/components/HowItWorks";
-import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import Faq from "@/components/Faq";
 import CtaBanner from "@/components/CtaBanner";
@@ -55,7 +54,6 @@ export default function Home() {
         <Enrollment />
         <StandardFeatures />
         <HowItWorks />
-        <Testimonials />
         <Pricing />
         <Faq />
         <CtaBanner />
