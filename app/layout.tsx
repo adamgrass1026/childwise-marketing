@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans } from "next/font/google";
+import MetaPixel from "@/components/MetaPixel";
 import "./globals.css";
 
 const sora = Sora({
@@ -109,7 +110,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${sora.variable} ${dmSans.variable}`}>
-      <body className="font-body leading-relaxed">{children}</body>
+      <body className="font-body leading-relaxed">
+        <MetaPixel />
+        {children}
+      </body>
     </html>
   );
 }
