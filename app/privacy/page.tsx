@@ -39,7 +39,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-[15px] text-white/60 mt-4">
-            Last updated: July 21, 2026
+            Last updated: August 1, 2026
           </p>
         </div>
       </section>
@@ -155,6 +155,13 @@ export default function PrivacyPage() {
                 children and families enrolled at that center.
               </li>
               <li>
+                <strong className="text-ink font-semibold">Meta</strong> — receives
+                limited website-visit data through the Meta Pixel on our public
+                marketing pages, used for ad measurement and to build advertising
+                audiences. This never includes child, family, or center records —
+                see Section 8.
+              </li>
+              <li>
                 <strong className="text-ink font-semibold">Legal and safety</strong> —
                 we may disclose information when required by law, court order, or to
                 protect the rights, property, or safety of ChildWise, our users, or the
@@ -162,8 +169,9 @@ export default function PrivacyPage() {
               </li>
             </ul>
             <p className="mt-4">
-              We do not share personal information with advertisers, data brokers, or
-              unrelated third parties.
+              Beyond the advertising measurement described above, we do not share
+              personal information with advertisers, data brokers, or unrelated
+              third parties.
             </p>
           </PolicySection>
 
@@ -250,13 +258,32 @@ export default function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="8. Cookies">
+          <PolicySection title="8. Cookies and Advertising">
             <p>
               ChildWise uses a small number of essential cookies and similar
               technologies to keep you signed in, remember your preferences, and keep
-              the service secure. We do not use advertising or cross-site tracking
-              cookies. You can disable cookies in your browser settings, but some parts
-              of the platform may not work correctly without them.
+              the service secure.
+            </p>
+            <p className="mt-4">
+              Our public marketing website (childwisesoftware.com) also uses the{" "}
+              <strong className="text-ink font-semibold">Meta Pixel</strong>, an
+              advertising tool from Meta (Facebook and Instagram). It helps us
+              measure how well our ads perform and show ChildWise ads to people who
+              have visited our site. This applies only to our marketing pages — we
+              do not use advertising trackers inside the ChildWise app, and we never
+              use child or family records for advertising. You can opt out of
+              personalized ads in{" "}
+              <a
+                href="https://www.facebook.com/adpreferences"
+                className="text-teal font-semibold hover:underline"
+              >
+                Meta&rsquo;s Ad Preferences
+              </a>
+              .
+            </p>
+            <p className="mt-4">
+              You can disable cookies in your browser settings, but some parts of
+              the platform may not work correctly without the essential ones.
             </p>
           </PolicySection>
 
