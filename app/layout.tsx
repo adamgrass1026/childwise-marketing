@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import MetaPixel from "@/components/MetaPixel";
 import "./globals.css";
 
@@ -113,6 +114,7 @@ export default function RootLayout({
       <body className="font-body leading-relaxed">
         <MetaPixel />
         {children}
+        <Analytics />
       </body>
     </html>
   );
