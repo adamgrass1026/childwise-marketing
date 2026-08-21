@@ -38,7 +38,7 @@ export default function Pricing() {
         {/* Launch offer badge */}
         <div className="flex justify-center mt-6 mb-10">
           <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#E8860A]/10 border border-[#E8860A]/25">
-            <span className="text-[#E8860A] text-sm font-bold">Launch Special</span>
+            <span className="text-[#E8860A] text-sm font-bold">Founder Pricing</span>
             <span className="text-slate text-sm">Save $19/mo for your first 12 months</span>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function Pricing() {
         <div className="max-w-[480px] mx-auto">
           <div className="p-10 px-9 rounded-card border bg-ink border-transparent shadow-s4 relative">
             <div className="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-teal text-ink text-[10px] font-extrabold px-[13px] py-1 rounded-full whitespace-nowrap tracking-wider uppercase">
-              LAUNCH PRICING
+              FOUNDER PRICING
             </div>
 
             <div className="text-center mb-6">
@@ -70,7 +70,7 @@ export default function Pricing() {
             </div>
 
             <p className="text-[14px] text-white/60 leading-[1.6] text-center mb-6">
-              The complete ChildWise platform — AI scheduling, accredited training, observations, predictive enrollment, and everything you need to run your center.
+              The complete ChildWise platform — AI scheduling, built-in CEU training, observations, predictive enrollment, and everything you need to run your center.
             </p>
 
             <div className="h-px mb-5 bg-white/10" />
@@ -102,7 +102,7 @@ export default function Pricing() {
         </div>
 
         <p className="text-center mt-[26px] text-[13px] text-slate/60">
-          No long-term contracts · Cancel anytime · Launch pricing locks in for 12 months
+          No long-term contracts · Cancel anytime · Founder pricing locks in for 12 months
         </p>
       </div>
     </section>

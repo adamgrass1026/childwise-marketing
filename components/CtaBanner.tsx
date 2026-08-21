@@ -9,10 +9,10 @@ export default function CtaBanner() {
           You deserve this
         </div>
         <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-white leading-[1.1] tracking-tight">
-          The center you imagined when<br />you started is still possible.
+          Stop doing two jobs.
         </h2>
         <p className="text-[17px] text-white/75 leading-[1.75] mt-3.5 mx-auto max-w-[510px] mb-[38px]">
-          ChildWise gives you back the time, the clarity, and the confidence to actually run it.
+          You didn&apos;t open a program to push paperwork. Thirty minutes, your real questions, live product — no slides.
         </p>
         <div className="flex items-center justify-center gap-3.5 flex-wrap">
           <a
@@ -29,7 +29,7 @@ export default function CtaBanner() {
           </a>
         </div>
         <p className="mt-[18px] text-[13px] text-white/50">
-          No credit card required · Free data migration · Cancel anytime
+          Founder pricing · Free onboarding · Free data migration
         </p>
       </div>
     </section>

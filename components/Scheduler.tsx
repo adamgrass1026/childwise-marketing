@@ -33,7 +33,7 @@ export default function Scheduler() {
               No more Sunday nights rebuilding next week&apos;s schedule
             </h2>
             <p className="text-[17px] text-slate leading-[1.75] mt-3.5 max-w-[480px]">
-              Parents enter their drop-off and pickup times. ChildWise builds the entire staff schedule automatically — right people, right ratios, zero overtime surprises. You review and confirm in minutes. That&apos;s it.
+              Your assistant director builds next week&apos;s schedule around ratios, time off, and your rules — before you&apos;ve finished your coffee. You review and confirm in minutes. That&apos;s it.
             </p>
 
             <div className="flex flex-col gap-4 mt-8">

@@ -17,7 +17,7 @@ export default function AiAssistant() {
               Your staff shouldn&apos;t have to wonder. Now they don&apos;t have to.
             </h2>
             <p className="text-[17px] text-slate leading-[1.75] mt-3.5 max-w-[480px]">
-              Teachers ask questions and get answers — with a direct link to the exact training that covers it. Directors get alerts before compliance problems happen. The whole center runs with less second-guessing and more confidence.
+              Licensing question at 6:45am? Your assistant director answers from your own state&apos;s handbook — and points each teacher to the exact training they need. The whole center runs with less second-guessing and more confidence.
             </p>
 
             <div className="flex flex-col gap-6 mt-8">

@@ -20,7 +20,7 @@ export default function HowItWorks() {
               Up and running in days
             </h2>
             <p className="text-[17px] text-slate leading-[1.75] mt-3 mx-auto max-w-[460px]">
-              We handle the migration so your team gets back to children faster.
+              Hiring an assistant director takes months. This one starts today — we handle the migration so your team gets back to children faster.
             </p>
           </div>
         </FadeIn>

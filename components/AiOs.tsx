@@ -12,7 +12,7 @@ const cells = [
     num: "02",
     icon: "🤖",
     title: "Answered your teacher's question — and taught her something",
-    desc: 'A teacher asked how to handle a child\'s emotional outburst. AI answered her — and <strong>linked directly to the accredited training module</strong> that covers it. She\'s already enrolled.',
+    desc: 'A teacher asked how to handle a child\'s emotional outburst. AI answered her — and <strong>linked directly to the training module</strong> that covers it. She\'s already enrolled.',
     tag: "AI Assistant",
   },
   {

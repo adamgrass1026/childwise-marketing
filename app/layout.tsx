@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | ChildWise",
   },
   description:
-    "ChildWise is the AI childcare management software that auto-builds staff schedules, tracks licensing and CEU training, drafts observations, and forecasts enrollment. Built for childcare centers, preschools, and in-home daycares. Launch pricing $79.99/mo.",
+    "ChildWise is the AI childcare management software that auto-builds staff schedules, tracks licensing and CEU training, drafts observations, and forecasts enrollment. Built for childcare centers, preschools, and in-home daycares. Founder pricing $79.99/mo.",
   applicationName: "ChildWise",
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
@@ -66,14 +66,14 @@ export const metadata: Metadata = {
     title:
       "ChildWise — AI Childcare Management Software for Centers & Daycares",
     description:
-      "Auto staff scheduling, accredited CEU training, AI observations, and predictive enrollment — the intelligent operating system built for childcare centers. Launch pricing $79.99/mo.",
+      "Auto staff scheduling, built-in CEU training, AI observations, and predictive enrollment — the intelligent operating system built for childcare centers. Founder pricing $79.99/mo.",
   },
   twitter: {
     card: "summary_large_image",
     title:
       "ChildWise — AI Childcare Management Software",
     description:
-      "Auto scheduling, training compliance, observations, and enrollment forecasting for childcare centers. Launch pricing $79.99/mo.",
+      "Auto scheduling, training compliance, observations, and enrollment forecasting for childcare centers. Founder pricing $79.99/mo.",
     creator: "@childwise",
   },
   robots: {

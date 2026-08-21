@@ -77,7 +77,7 @@ export default function OpenGraphImage() {
               lineHeight: 1.35,
             }}
           >
-            AI scheduling · Accredited training · Observations · Predictive enrollment
+            AI scheduling · CEU training · Observations · Predictive enrollment
           </div>
         </div>
 

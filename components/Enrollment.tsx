@@ -17,7 +17,7 @@ export default function Enrollment() {
             Stop finding out about enrollment gaps after they hit your revenue
           </h2>
           <p className="text-[17px] text-slate leading-[1.75] mt-3.5">
-            ChildWise AI sees what&apos;s coming weeks before it arrives — open spots, aging-out families, seasonal dips. You get the forecast in time to act, not in time to react.
+            Your assistant director sees open spots before they exist — aging-out families, seasonal dips, schedule changes — so you never leave a seat, or the revenue behind it, empty.
           </p>
         </div>
 

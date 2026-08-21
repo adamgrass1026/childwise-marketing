@@ -9,7 +9,7 @@ const organization = {
   url: SITE_URL,
   logo: `${SITE_URL}/icon`,
   description:
-    "ChildWise is the AI-powered childcare management platform for daycare centers, preschools, and in-home providers. Auto staff scheduling, accredited CEU training, observations, and predictive enrollment in one connected operating system.",
+    "ChildWise is the AI-powered childcare management platform for daycare centers, preschools, and in-home providers. Auto staff scheduling, built-in CEU training, observations, and predictive enrollment in one connected operating system.",
   email: "hello@childwisesoftware.com",
   sameAs: ["https://childwiselearning.com"],
   contactPoint: [
@@ -71,13 +71,17 @@ const softwareApplication = {
     priceValidUntil: "2027-04-09",
     availability: "https://schema.org/InStock",
     description:
-      "Launch pricing — $79.99/month (regular $99/month) for the first 12 months.",
+      "Founder pricing — $79.99/month (regular $99/month) for the first 12 months.",
     url: `${SITE_URL}/#pricing`,
   },
   publisher: { "@id": `${SITE_URL}/#organization` },
 };
 
 export const faqItems = [
+  {
+    q: 'What does "this is your assistant director" mean?',
+    a: "ChildWise does the work you'd hire an assistant director for: enrollment paperwork start to finish, staff scheduling that respects ratios and time off, licensing and compliance answers from your state's handbook, CE training for every teacher, observations matched to state benchmarks, and enrollment forecasting. It's a full childcare management platform — priced like software, working like staff.",
+  },
   {
     q: "What is ChildWise?",
     a: "ChildWise is an AI-powered childcare management software that runs the entire operations of a childcare center — auto-generating staff schedules, tracking licensing and CEU training, drafting child observations from photos and voice notes, forecasting enrollment, and handling billing and parent communication in one connected platform.",
@@ -100,7 +104,7 @@ export const faqItems = [
   },
   {
     q: "How does ChildWise help with CDA and CEU training?",
-    a: "ChildWise integrates with ChildWise Learning, our accredited CEU and CDA training platform. The AI assistant matches each staff member to the exact courses they need to meet upcoming licensing renewals and auto-enrolls them with director approval.",
+    a: "ChildWise integrates with ChildWise Learning, our CEU and CDA training platform (in the final stage of IACET accreditation). The AI assistant matches each staff member to the exact courses they need to meet upcoming licensing renewals and auto-enrolls them with director approval.",
   },
   {
     q: "Does ChildWise work for in-home daycares or only large centers?",

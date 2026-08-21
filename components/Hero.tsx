@@ -106,9 +106,9 @@ export default function Hero() {
           <span className="block text-[11px] sm:text-[13px] font-semibold tracking-[.2em] uppercase text-teal/90 mb-4">
             AI Childcare Management Software
           </span>
-          <span className="inline-flex text-[clamp(48px,7vw,88px)]">
-            <span className="text-white">Child</span>
-            <span className="text-teal">Wise</span>
+          <span className="block text-[clamp(36px,5.5vw,68px)] leading-[1.08] max-w-[900px] mx-auto">
+            <span className="text-white">It&apos;s not just software.</span>{" "}
+            <span className="text-teal">This is your assistant director.</span>
           </span>
         </h1>
 
@@ -121,9 +121,9 @@ export default function Hero() {
             transition: "opacity 0.6s ease 0.7s, transform 0.6s ease 0.7s",
           }}
         >
-          The intelligent operating system for childcare centers, preschools, and
-          in-home daycares. AI staff scheduling, accredited CEU training,
-          observations, and predictive enrollment — all in one platform.
+          ChildWise handles enrollment, paperwork, compliance, staff training,
+          and scheduling — everything you&apos;d hand an assistant director, at
+          one software price.
         </p>
 
         {/* CTA buttons */}
@@ -149,6 +149,16 @@ export default function Hero() {
           </a>
         </div>
 
+        {/* Micro-line */}
+        <p
+          className="text-[13px] text-white/45 -mt-9"
+          style={{
+            opacity: visible ? 1 : 0,
+            transition: "opacity 0.6s ease 1s",
+          }}
+        >
+          Built by a center owner&nbsp;&nbsp;•&nbsp;&nbsp;Founder pricing
+        </p>
       </div>
     </section>
   );

@@ -48,7 +48,7 @@ export default function Observations() {
               Teachers should be watching children — not writing about them
             </h2>
             <p className="text-[17px] text-slate leading-[1.75] mt-3.5 max-w-[500px]">
-              Snap a photo. Leave a voice note. ChildWise drafts the observation, suggests the developmental milestones, and waits for the teacher to review and confirm every detail. The documentation gets done. The teacher stays present.
+              Your assistant director matches every observation to your state&apos;s learning benchmarks and builds each child&apos;s portfolio automatically — the teacher just reviews and confirms. The documentation gets done. The teacher stays present.
             </p>
 
             <div className="flex flex-col gap-5 mt-8">

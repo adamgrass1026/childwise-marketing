@@ -10,7 +10,7 @@ const beforeTools = [
 const includes = [
   "Center management — scheduling, billing, attendance, messaging",
   "AI staff assistant — answers questions, links to training instantly",
-  { text: "Accredited CEU training — built in, no separate subscription", bold: true },
+  { text: "CEU training catalog — built in, no separate subscription", bold: true },
   { text: "CDA credential pathway — included", bold: true },
   "Automatic CEU compliance tracking — zero manual logging",
   "AI observations, predictive enrollment, incident reporting",
@@ -26,11 +26,10 @@ export default function Consolidation() {
               The only platform of its kind
             </div>
             <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-ink leading-[1.1] tracking-tight">
-              Every other platform sends you somewhere else for training.<br />
-              ChildWise <em className="italic text-teal">is</em> the training.
+              One price. A whole <em className="italic text-teal">front office</em>.
             </h2>
             <p className="text-[17px] text-slate leading-[1.75] mt-3.5 mx-auto max-w-[560px]">
-              Accredited CEU courses — including a full CDA credential pathway — are built directly into ChildWise. No second subscription. No separate login. No hours lost to another platform. Nothing like this exists anywhere else in childcare.
+              Most programs pay three companies to do one job — one for software, one for curriculum, one for staff training. $240+/month, the usual way. We know, because we run centers and used to pay those bills too. ChildWise is all of it, in one place, for one price — with an assistant director&apos;s worth of work built in.
             </p>
           </div>
         </FadeIn>
@@ -111,7 +110,7 @@ export default function Consolidation() {
                   <div>
                     <div className="flex items-center gap-2 mb-1">
                       <span className="text-white/40 text-sm line-through">$99/mo</span>
-                      <span className="bg-[#E8860A] text-white text-[9px] font-bold px-[7px] py-[2px] rounded-full uppercase tracking-wide">Launch Special</span>
+                      <span className="bg-[#E8860A] text-white text-[9px] font-bold px-[7px] py-[2px] rounded-full uppercase tracking-wide">Founder Pricing</span>
                     </div>
                     <div className="flex items-baseline gap-1">
                       <span className="text-[22px] font-semibold text-white mt-[5px]">$</span>
@@ -134,7 +133,7 @@ export default function Consolidation() {
         <FadeIn>
           <div className="text-center p-7 bg-white border border-border rounded-card shadow-s1">
             <div className="font-heading text-[clamp(18px,2.5vw,24px)] font-semibold text-ink leading-[1.4] mb-2">
-              No other childcare platform includes accredited CEU training.<br />
+              No other childcare platform includes the full CEU training catalog.<br />
               <em className="italic text-teal">ChildWise is the only one.</em>
             </div>
             <div className="text-sm text-slate/60">

@@ -2,10 +2,10 @@ import Link from "next/link";
 import FadeIn from "./FadeIn";
 
 const cdaCourses = [
-  { icon: "🧒", iconBg: "bg-mist", name: "Child Development Milestones", meta: "3.0 CEU hrs · CDA Unit 1 · Accredited", status: "complete" },
-  { icon: "🚨", iconBg: "bg-[#fef3e2]", name: "Health, Safety & Nutrition", meta: "2.5 CEU hrs · CDA Unit 2 · Accredited", progress: 72 },
-  { icon: "🌱", iconBg: "bg-[#e8faf0]", name: "Nurturing Early Literacy", meta: "2.0 CEU hrs · CDA Unit 3 · Accredited", progress: 0 },
-  { icon: "🤝", iconBg: "bg-[rgba(27,58,107,.07)]", name: "Family & Community Relations", meta: "1.5 CEU hrs · CDA Unit 4 · Accredited", status: "complete" },
+  { icon: "🧒", iconBg: "bg-mist", name: "Child Development Milestones", meta: "3.0 CEU hrs · CDA Unit 1",status: "complete" },
+  { icon: "🚨", iconBg: "bg-[#fef3e2]", name: "Health, Safety & Nutrition", meta: "2.5 CEU hrs · CDA Unit 2",progress: 72 },
+  { icon: "🌱", iconBg: "bg-[#e8faf0]", name: "Nurturing Early Literacy", meta: "2.0 CEU hrs · CDA Unit 3",progress: 0 },
+  { icon: "🤝", iconBg: "bg-[rgba(27,58,107,.07)]", name: "Family & Community Relations", meta: "1.5 CEU hrs · CDA Unit 4",status: "complete" },
 ];
 
 const compliance = [
@@ -28,13 +28,13 @@ export default function Training() {
           {/* Left text */}
           <div>
             <div className="inline-flex items-center gap-[7px] text-[11px] font-semibold tracking-[.12em] uppercase text-[#E8860A] px-3.5 py-[5px] bg-[#fef3e2] border border-[rgba(232,134,10,.25)] rounded-full mb-[18px]">
-              🎓 Accredited Training Platform
+              🎓 CEU Training Included
             </div>
             <h2 className="font-heading text-[clamp(30px,4vw,48px)] font-semibold text-ink leading-[1.1] tracking-tight max-w-[500px]">
               Never walk into a licensing audit wondering if your staff hours are current
             </h2>
             <p className="text-[17px] text-slate leading-[1.75] mt-3.5 max-w-[500px]">
-              ChildWise Learning tracks every training hour, every certification, every renewal deadline — automatically. Directors get alerts weeks before anything lapses. And staff can earn a CDA credential without ever leaving your platform.
+              Every teacher&apos;s CE hours, tracked and current — with the full training catalog included. No third vendor, no third bill. Directors get alerts weeks before anything lapses, and staff can earn a CDA credential without ever leaving your platform.
             </p>
 
             {/* CDA Badge */}
@@ -42,7 +42,7 @@ export default function Training() {
               <div className="text-[22px]">🏆</div>
               <div>
                 <div className="text-sm font-bold text-ink">CDA Credential Pathway Available</div>
-                <div className="text-xs text-slate/60 mt-px">State-approved, accredited modules that count toward the Child Development Associate — the gold standard in early childhood education</div>
+                <div className="text-xs text-slate/60 mt-px">The full CEU training catalog included — in the final stage of IACET accreditation — with modules that count toward the Child Development Associate, the gold standard in early childhood education</div>
               </div>
             </div>
 
@@ -50,7 +50,7 @@ export default function Training() {
               {[
                 { text: '<strong>AI-linked answers</strong> — Staff get answers to childcare questions with direct links to the exact training module, automatically logged for compliance.' },
                 { text: '<strong>Auto compliance tracking</strong> — Every CEU hour syncs to staff profiles in real time. Licensing audits become a formality, not a panic.' },
-                { text: '<strong>CDA pathway courses</strong> — Accredited modules that build toward the Child Development Associate credential — motivating staff to grow their careers at your center.' },
+                { text: '<strong>CDA pathway courses</strong> — Modules that build toward the Child Development Associate credential — motivating staff to grow their careers at your center.' },
                 { text: '<strong>Proactive renewal alerts</strong> — Directors are notified weeks before a staff member\'s hours fall short — never the morning of their renewal.' },
                 { text: '<strong>Single sign-on</strong> — Staff access ChildWise Learning directly through ChildWise. One platform, one login, zero friction.' },
               ].map((item, i) => (

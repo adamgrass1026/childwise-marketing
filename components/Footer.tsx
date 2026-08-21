@@ -66,7 +66,7 @@ export default function Footer() {
               href="https://childwiselearning.com"
               className="inline-flex items-center gap-[7px] px-3.5 py-[9px] bg-[rgba(10,191,188,.13)] border border-[rgba(10,191,188,.27)] rounded-[9px] text-xs font-medium text-teal no-underline transition-all duration-150 hover:bg-[rgba(10,191,188,.22)]"
             >
-              🎓 &nbsp;ChildWise Learning — Accredited CEU &amp; CDA Training →
+              🎓 &nbsp;ChildWise Learning — CEU &amp; CDA Training →
             </a>
           </div>
 
