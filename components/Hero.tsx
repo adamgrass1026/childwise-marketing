@@ -106,7 +106,11 @@ export default function Hero() {
           <span className="block text-[11px] sm:text-[13px] font-semibold tracking-[.2em] uppercase text-teal/90 mb-4">
             AI Childcare Management Software
           </span>
-          <span className="block text-[clamp(36px,5.5vw,68px)] leading-[1.08] max-w-[900px] mx-auto">
+          <span className="inline-flex text-[clamp(48px,7vw,88px)]">
+            <span className="text-white">Child</span>
+            <span className="text-teal">Wise</span>
+          </span>
+          <span className="block text-[clamp(22px,3.2vw,38px)] leading-[1.25] mt-5 max-w-[720px] mx-auto">
             <span className="text-white">It&apos;s not just software.</span>{" "}
             <span className="text-teal">This is your assistant director.</span>
           </span>
