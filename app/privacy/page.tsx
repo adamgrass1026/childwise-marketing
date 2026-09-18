@@ -39,7 +39,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-[15px] text-white/60 mt-4">
-            Last updated: August 1, 2026
+            Last updated: September 18, 2026
           </p>
         </div>
       </section>
@@ -81,7 +81,8 @@ export default function PrivacyPage() {
               <li>
                 <strong className="text-ink font-semibold">Family and child records:</strong>{" "}
                 enrollment details, emergency contacts, attendance, developmental
-                observations, and communications — provided to us by the childcare
+                observations, photos and daily-activity updates shared by center
+                staff, and communications — provided to us by the childcare
                 center acting on behalf of families.
               </li>
               <li>
@@ -146,6 +147,18 @@ export default function PrivacyPage() {
                 our managed PostgreSQL database and authentication services.
               </li>
               <li>
+                <strong className="text-ink font-semibold">Vercel</strong> — hosts
+                our application servers and file storage, including photos and
+                documents shared through the platform.
+              </li>
+              <li>
+                <strong className="text-ink font-semibold">Anthropic</strong> —
+                provides the AI models behind ChildWise&rsquo;s optional AI-assisted
+                features (see Section 5). Content sent for AI processing is
+                transmitted securely, is not used to train AI models, and is
+                retained by Anthropic only transiently for processing.
+              </li>
+              <li>
                 <strong className="text-ink font-semibold">Resend</strong> — delivers
                 transactional email (receipts, password resets, notifications).
               </li>
@@ -196,7 +209,45 @@ export default function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="5. Data Security">
+          <PolicySection title="5. AI-Assisted Features">
+            <p>
+              ChildWise offers optional AI-assisted features that help center staff
+              document children&rsquo;s learning — for example, drafting a
+              developmental observation from a classroom photo a teacher has
+              shared, suggesting alignments to state early-learning standards, and
+              generating lesson-plan ideas.
+            </p>
+            <ul className="list-disc pl-6 mt-4 space-y-2">
+              <li>
+                <strong className="text-ink font-semibold">Teacher review is always required.</strong>{" "}
+                AI-drafted content is a suggestion to staff. Nothing written by AI
+                becomes part of a child&rsquo;s record or is shown to families until a
+                teacher or director at the center has reviewed and approved it.
+              </li>
+              <li>
+                <strong className="text-ink font-semibold">Photo analysis is consent-gated per child.</strong>{" "}
+                A child&rsquo;s photos are analyzed by AI only when the center has
+                recorded guardian consent for that child. Without consent, that
+                child&rsquo;s photos are never sent for AI processing.
+              </li>
+              <li>
+                <strong className="text-ink font-semibold">Data minimization.</strong>{" "}
+                Before a photo is sent for AI processing it is reduced in size and
+                stripped of all metadata (such as location and device details), and
+                children&rsquo;s names are withheld from the AI. Our AI provider does
+                not use this content to train its models and retains it only
+                transiently for processing.
+              </li>
+              <li>
+                <strong className="text-ink font-semibold">Opting out.</strong>{" "}
+                Families can opt out at any time through their childcare center.
+                Opting out stops AI analysis of that child&rsquo;s photos immediately
+                and does not affect any other ChildWise service.
+              </li>
+            </ul>
+          </PolicySection>
+
+          <PolicySection title="6. Data Security">
             <p>
               We use industry-standard safeguards to protect the information we store,
               including:
@@ -215,7 +266,7 @@ export default function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="6. Data Retention">
+          <PolicySection title="7. Data Retention">
             <p>
               We retain your information for as long as your ChildWise account is
               active and the data is needed to provide the service. If a center
@@ -232,7 +283,7 @@ export default function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="7. Your Rights">
+          <PolicySection title="8. Your Rights">
             <p>
               Depending on where you live, you may have rights under applicable privacy
               laws, including the right to:
@@ -258,7 +309,7 @@ export default function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="8. Cookies and Advertising">
+          <PolicySection title="9. Cookies and Advertising">
             <p>
               ChildWise uses a small number of essential cookies and similar
               technologies to keep you signed in, remember your preferences, and keep
@@ -287,7 +338,7 @@ export default function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="9. Changes to This Policy">
+          <PolicySection title="10. Changes to This Policy">
             <p>
               We may update this Privacy Policy from time to time. When we make
               material changes, we will update the &ldquo;Last updated&rdquo; date at
@@ -297,7 +348,7 @@ export default function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="10. Contact Us">
+          <PolicySection title="11. Contact Us">
             <p>
               If you have questions about this Privacy Policy or how ChildWise handles
               your information, please contact us:
