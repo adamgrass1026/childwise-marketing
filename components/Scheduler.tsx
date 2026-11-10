@@ -75,23 +75,42 @@ export default function Scheduler() {
           </FadeIn>
         </div>
 
-        {/* Staff hours printable */}
-        <FadeIn>
-          <div className="max-w-[880px] mx-auto mt-14">
-            <div className="rounded-[16px] overflow-hidden shadow-s3 border border-border">
-              <Image
-                src="/images/schedule-print-staff.png"
-                alt="Print-ready center-wide staff hours sheet for the week"
-                width={1600}
-                height={1212}
-                className="w-full h-auto"
-              />
+        {/* Teacher app + staff hours printable */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-14 items-center mt-14">
+          <FadeIn className="lg:col-span-2">
+            <div className="flex flex-col items-center">
+              <div className="rounded-[26px] overflow-hidden shadow-s3 border border-border max-w-[380px]">
+                <Image
+                  src="/images/teacher-schedule-mobile.png"
+                  alt="ChildWise teacher app showing the day's schedule for a room — each child's expected hours and every staff shift"
+                  width={729}
+                  height={1584}
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="text-[13px] text-slate/80 text-center mt-3 max-w-[340px]">
+                Teachers see their rooms and their own week on their phone — who&apos;s coming, when, and who&apos;s on shift.
+              </p>
             </div>
-            <p className="text-[13px] text-slate/80 text-center mt-3">
-              Center-wide staff hours for the week, one click to print — ready for payroll or the licensing visit.
-            </p>
-          </div>
-        </FadeIn>
+          </FadeIn>
+
+          <FadeIn delay={1} className="lg:col-span-3">
+            <div>
+              <div className="rounded-[16px] overflow-hidden shadow-s3 border border-border">
+                <Image
+                  src="/images/schedule-print-staff.png"
+                  alt="Print-ready center-wide staff hours sheet for the week"
+                  width={1600}
+                  height={1212}
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="text-[13px] text-slate/80 text-center mt-3">
+                Center-wide staff hours for the week, one click to print — ready for payroll or the licensing visit.
+              </p>
+            </div>
+          </FadeIn>
+        </div>
 
         {/* Feature cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-14">
