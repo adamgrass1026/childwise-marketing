@@ -44,16 +44,16 @@ export default function Home() {
         </div>
 
         <ProofStrip />
-        <AiOs />
-        <Consolidation />
-        <BeforeAfter />
         <Scheduler />
         <AiAssistant />
         <Observations />
         <Training />
         <Enrollment />
         <StandardFeatures />
+        <AiOs />
         <HowItWorks />
+        <BeforeAfter />
+        <Consolidation />
         <Pricing />
         <Faq />
         <CtaBanner />
