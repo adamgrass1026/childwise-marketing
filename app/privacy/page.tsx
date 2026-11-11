@@ -39,7 +39,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-[15px] text-white/60 mt-4">
-            Last updated: September 18, 2026
+            Last updated: November 11, 2026
           </p>
         </div>
       </section>
@@ -173,6 +173,14 @@ export default function PrivacyPage() {
                 marketing pages, used for ad measurement and to build advertising
                 audiences. This never includes child, family, or center records —
                 see Section 8.
+              </li>
+              <li>
+                <strong className="text-ink font-semibold">OpenAI</strong> — receives
+                limited website-visit data through the OpenAI advertising
+                measurement pixel on our public marketing pages, used to measure
+                how ads shown through OpenAI products perform (for example,
+                counting visits and completed demo bookings that follow an ad).
+                This never includes child, family, or center records.
               </li>
               <li>
                 <strong className="text-ink font-semibold">Legal and safety</strong> —
@@ -331,6 +339,17 @@ export default function PrivacyPage() {
                 Meta&rsquo;s Ad Preferences
               </a>
               .
+            </p>
+            <p className="mt-4">
+              Our marketing website also uses the{" "}
+              <strong className="text-ink font-semibold">
+                OpenAI advertising measurement pixel
+              </strong>
+              . It helps us measure how ads shown through OpenAI products
+              perform — for example, counting visits to our site and completed
+              demo bookings that follow an ad. Like the Meta Pixel, it runs only
+              on our public marketing pages, never inside the ChildWise app, and
+              child and family records are never used for advertising.
             </p>
             <p className="mt-4">
               You can disable cookies in your browser settings, but some parts of
