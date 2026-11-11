@@ -6,9 +6,9 @@
 
 export const OAIQ_PIXEL_ID = "13ZaqYKWxLGjZL4AbSzrh5";
 
-// Single debug switch for the OpenAI pixel. Leave true until bookings are
-// confirmed arriving in the OpenAI Ads dashboard, then flip to false.
-export const OAIQ_DEBUG = true;
+// Single debug switch for the OpenAI pixel. Bookings confirmed arriving in
+// the OpenAI Ads Event Stream on 11/11/2026; flip to true to debug again.
+export const OAIQ_DEBUG = false;
 
 declare global {
   interface Window {
