@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Sora, DM_Sans } from "next/font/google";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";
 import MetaPixel from "@/components/MetaPixel";
+import { OAIQ_PIXEL_ID, OAIQ_DEBUG } from "@/lib/tracking";
 import "./globals.css";
 
 const sora = Sora({
@@ -112,6 +114,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${sora.variable} ${dmSans.variable}`}>
       <body className="font-body leading-relaxed">
+        {/* OpenAI Ads pixel — beforeInteractive renders it into the initial
+            document <head>, once per page, ahead of hydration. Config lives
+            in lib/tracking.ts (single debug flag). */}
+        <Script id="openai-pixel" strategy="beforeInteractive">
+          {`!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"${OAIQ_PIXEL_ID}",debug:${OAIQ_DEBUG}});`}
+        </Script>
         <MetaPixel />
         {children}
         <Analytics />
