@@ -110,15 +110,32 @@ export default function DemoPage() {
               ))}
             </ul>
 
-            <a
-              href="#product-proof"
-              className="inline-flex items-center gap-2 mt-8 text-[15px] font-semibold text-teal no-underline hover:text-teal-light"
-            >
-              See it before the call
-              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
-                <path d="M8 3v10M4 9.5L8 13l4-3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </a>
+            {/* Preview cards — proof the product is viewable before booking */}
+            <div className="mt-9">
+              <div className="text-[11px] font-semibold tracking-[.12em] uppercase text-white/50 mb-3">
+                See it before you book
+              </div>
+              <div className="grid grid-cols-3 gap-3">
+                {[
+                  { href: "#story-scheduling", label: "Scheduling", src: "/demo/schedule-room.png", alt: "Preview of a ChildWise room schedule" },
+                  { href: "#story-observations", label: "Observations", src: "/demo/review-drafts.png", alt: "Preview of ChildWise AI observation drafts" },
+                  { href: "#story-assistant", label: "Staff Assistant", src: "/demo/staff-assistant.png", alt: "Preview of the ChildWise Staff Assistant chat" },
+                ].map((c) => (
+                  <a
+                    key={c.label}
+                    href={c.href}
+                    className="block bg-white/[.05] border border-white/10 rounded-[12px] overflow-hidden no-underline transition-colors hover:border-teal/60"
+                  >
+                    <div className="h-[72px] sm:h-[88px] overflow-hidden border-b border-white/10">
+                      <Image src={c.src} alt={c.alt} width={1800} height={1166} className="w-full h-full object-cover object-left-top" />
+                    </div>
+                    <div className="px-2.5 py-2 text-[12px] sm:text-[13px] font-semibold text-white/85 text-center">
+                      {c.label}
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
 
             {/* Video slot — hidden until Adam supplies a file. */}
             {SHOW_VIDEO && VIDEO_SRC ? (
@@ -141,7 +158,7 @@ export default function DemoPage() {
           </h2>
 
           {/* Story 1 — Schedules that build themselves */}
-          <div className="mt-14">
+          <div id="story-scheduling" className="mt-14" style={{ scrollMarginTop: "24px" }}>
             <h3 className="font-heading text-[22px] font-semibold text-teal text-center">
               Schedules that build themselves
             </h3>
@@ -178,7 +195,7 @@ export default function DemoPage() {
           </div>
 
           {/* Story 2 — Observations written for you */}
-          <div className="mt-20">
+          <div id="story-observations" className="mt-20" style={{ scrollMarginTop: "24px" }}>
             <h3 className="font-heading text-[22px] font-semibold text-teal text-center">
               Observations written for you
             </h3>
@@ -199,7 +216,7 @@ export default function DemoPage() {
           </div>
 
           {/* Story 3 — An assistant for every teacher */}
-          <div className="mt-20">
+          <div id="story-assistant" className="mt-20" style={{ scrollMarginTop: "24px" }}>
             <h3 className="font-heading text-[22px] font-semibold text-teal text-center">
               An assistant for every teacher
             </h3>
