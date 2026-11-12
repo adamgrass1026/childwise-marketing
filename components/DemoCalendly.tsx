@@ -23,14 +23,15 @@ export default function DemoCalendly() {
 
   return (
     <div className="bg-white rounded-[18px] border border-border shadow-s3 overflow-hidden">
-      {/* data-resize lets Calendly's widget.js grow the iframe to the embed's
-          reported page height, so the full month calendar shows with no inner
-          scrollbar on any viewport. The style height is just the pre-load floor. */}
+      {/* data-resize sizes the iframe to the embed's full page height, so the
+          whole month grid and the time-zone line render with no inner
+          scrollbar. The in-page "see the product first" cue is the preview
+          card row in the left column, not a clipped calendar. */}
       <div
         className="calendly-inline-widget"
         data-url={CALENDLY_URL}
         data-resize="true"
-        style={{ minWidth: "320px", height: "980px" }}
+        style={{ minWidth: "320px", height: "700px" }}
       />
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
     </div>
