@@ -23,14 +23,13 @@ export default function DemoCalendly() {
 
   return (
     <div className="bg-white rounded-[18px] border border-border shadow-s3 overflow-hidden">
-      {/* data-resize lets Calendly's widget.js grow the iframe to the embed's
-          reported page height, so the full month calendar shows with no inner
-          scrollbar on any viewport. The style height is just the pre-load floor. */}
+      {/* Fixed height (Adam, 11/11): a full-height calendar pushed the product
+          sections below the fold with no hint they exist. The widget scrolls
+          internally; the page fold now shows content continuing beneath. */}
       <div
         className="calendly-inline-widget"
         data-url={CALENDLY_URL}
-        data-resize="true"
-        style={{ minWidth: "320px", height: "980px" }}
+        style={{ minWidth: "320px", height: "620px" }}
       />
       <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
     </div>

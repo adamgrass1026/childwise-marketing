@@ -110,6 +110,16 @@ export default function DemoPage() {
               ))}
             </ul>
 
+            <a
+              href="#product-proof"
+              className="inline-flex items-center gap-2 mt-8 text-[15px] font-semibold text-teal no-underline hover:text-teal-light"
+            >
+              See it before the call
+              <svg viewBox="0 0 16 16" fill="none" className="w-4 h-4">
+                <path d="M8 3v10M4 9.5L8 13l4-3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
+
             {/* Video slot — hidden until Adam supplies a file. */}
             {SHOW_VIDEO && VIDEO_SRC ? (
               <div className="mt-10 rounded-[18px] overflow-hidden border border-white/15 shadow-s3">
@@ -125,7 +135,7 @@ export default function DemoPage() {
         </div>
 
         {/* ───────────────────── 1. PRODUCT VISUALS ───────────────────── */}
-        <section className="mt-24 lg:mt-32">
+        <section id="product-proof" className="mt-16 lg:mt-20" style={{ scrollMarginTop: "24px" }}>
           <h2 className="font-heading text-[clamp(28px,3.5vw,42px)] font-semibold text-white leading-[1.12] tracking-tight text-center">
             See it before the call
           </h2>
@@ -183,7 +193,7 @@ export default function DemoPage() {
                 mobileHeight={1185}
               />
               <Caption>
-                AI drafts each child&apos;s observation from classroom photos. Nothing reaches a family until you approve it.
+                AI drafts each child&apos;s observation from classroom photos and maps it to your state&apos;s learning standards. Nothing reaches a family until you approve it.
               </Caption>
             </div>
           </div>
