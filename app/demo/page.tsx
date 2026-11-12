@@ -37,6 +37,18 @@ function Caption({ children }: { children: React.ReactNode }) {
   return <p className="text-[14px] text-white/70 leading-relaxed mt-3 text-center">{children}</p>;
 }
 
+function StoryHeader({ eyebrow, title, benefit }: { eyebrow: string; title: string; benefit: string }) {
+  return (
+    <div>
+      <div className="text-[12px] font-bold tracking-[.16em] uppercase text-teal">{eyebrow}</div>
+      <h3 className="font-heading text-[clamp(25px,2.8vw,36px)] font-semibold text-white leading-[1.15] tracking-tight mt-2.5">
+        {title}
+      </h3>
+      <p className="text-[16px] text-white/65 leading-[1.7] mt-3 max-w-[60ch]">{benefit}</p>
+    </div>
+  );
+}
+
 function WebShot({
   src,
   mobileSrc,
@@ -158,11 +170,17 @@ export default function DemoPage() {
           </h2>
 
           {/* Story 1 — Schedules that build themselves */}
-          <div id="story-scheduling" className="mt-14" style={{ scrollMarginTop: "24px" }}>
-            <h3 className="font-heading text-[22px] font-semibold text-teal text-center">
-              Schedules that build themselves
-            </h3>
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10 lg:gap-12 items-center mt-8">
+          <div
+            id="story-scheduling"
+            className="mt-14 bg-white/[.03] border border-white/[.08] rounded-[22px] p-6 sm:p-10"
+            style={{ scrollMarginTop: "24px" }}
+          >
+            <StoryHeader
+              eyebrow="01 · Scheduling"
+              title="Schedules that build themselves"
+              benefit="Staff shifts built around when children are actually there, so rooms stay in ratio and overtime stays down."
+            />
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10 lg:gap-12 items-center mt-10">
               {/* Phone leads on mobile; sits beside the web shot on desktop */}
               <div className="lg:order-2">
                 <PhoneShot
@@ -189,17 +207,27 @@ export default function DemoPage() {
                   mobileWidth={858}
                   mobileHeight={1850}
                 />
-                <Caption>ChildWise builds each room&apos;s staff schedule from those hours.</Caption>
+                <Caption>
+                  {SHOW_PARENT_HOURS_STEP
+                    ? "ChildWise builds each room's staff schedule from those hours."
+                    : "ChildWise builds each room's staff schedule from the hours children attend."}
+                </Caption>
               </div>
             </div>
           </div>
 
           {/* Story 2 — Observations written for you */}
-          <div id="story-observations" className="mt-20" style={{ scrollMarginTop: "24px" }}>
-            <h3 className="font-heading text-[22px] font-semibold text-teal text-center">
-              Observations written for you
-            </h3>
-            <div className="max-w-[880px] mx-auto mt-8">
+          <div
+            id="story-observations"
+            className="mt-12 lg:mt-16 bg-white/[.03] border border-white/[.08] rounded-[22px] p-6 sm:p-10"
+            style={{ scrollMarginTop: "24px" }}
+          >
+            <StoryHeader
+              eyebrow="02 · Observations"
+              title="Observations written for you"
+              benefit="A teacher takes a photo. The observation is drafted and tied to your state's learning standards."
+            />
+            <div className="max-w-[880px] mt-10">
               <WebShot
                 src="/demo/review-drafts.png"
                 mobileSrc="/demo/review-drafts-mobile.png"
@@ -215,13 +243,20 @@ export default function DemoPage() {
             </div>
           </div>
 
-          {/* Story 3 — An assistant for every teacher */}
-          <div id="story-assistant" className="mt-20" style={{ scrollMarginTop: "24px" }}>
-            <h3 className="font-heading text-[22px] font-semibold text-teal text-center">
-              An assistant for every teacher
-            </h3>
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10 lg:gap-12 items-center mt-8">
-              <div className="lg:order-2">
+          {/* Story 3 — An assistant for every teacher (arrangement reversed:
+              phone left, web right, so the three rows don't read identically) */}
+          <div
+            id="story-assistant"
+            className="mt-12 lg:mt-16 bg-white/[.03] border border-white/[.08] rounded-[22px] p-6 sm:p-10"
+            style={{ scrollMarginTop: "24px" }}
+          >
+            <StoryHeader
+              eyebrow="03 · Staff Assistant"
+              title="An assistant for every teacher"
+              benefit="Answers drawn from your licensing rules and your own policies, any time of day."
+            />
+            <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-10 lg:gap-12 items-center mt-10">
+              <div>
                 <PhoneShot
                   src="/demo/staff-assistant-phone.png"
                   alt="ChildWise Staff Assistant on a phone answering a teacher's question about a child biting"
@@ -232,7 +267,7 @@ export default function DemoPage() {
               </div>
               {/* Chat text can't stay legible at 390px by cropping alone, so the
                   phone shot (same conversation) carries mobile; web shows ≥sm. */}
-              <div className="lg:order-1 hidden sm:block">
+              <div className="hidden sm:block">
                 <WebShot
                   src="/demo/staff-assistant.png"
                   alt="ChildWise Staff Assistant on the web answering a question about biting with steps grounded in state licensing rules"
