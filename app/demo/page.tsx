@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import DemoCalendly from "@/components/DemoCalendly";
+import DemoHeroMedia from "@/components/DemoHeroMedia";
 
 export const metadata: Metadata = {
   title: "Book a Live Demo",
@@ -13,8 +14,8 @@ export const metadata: Metadata = {
 // Flip these on only when Adam supplies real content. Never invent reviews.
 const SHOW_REVIEWS = false;
 const REVIEWS: { quote: string; name: string }[] = [];
-const SHOW_VIDEO = false;
-const VIDEO_SRC = ""; // e.g. "/videos/demo-overview.mp4"
+// Hero video: swap the DemoHeroMedia call in the hero to videoSrc when a
+// file exists (see comment at the call site).
 // Story 1 step 1 — parent "Usual Hours" phone screenshot not yet supplied.
 const SHOW_PARENT_HOURS_STEP = false;
 // Operator photo not yet supplied.
@@ -86,9 +87,11 @@ export default function DemoPage() {
           <span className="text-teal">Wise</span>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_500px] gap-10 lg:gap-16 items-start mt-8 lg:mt-14">
-          {/* Copy */}
-          <div className="max-w-[560px]">
+        {/* HERO — product first; booking lives at #book, last on the page.
+            DOM order gives the mobile stack (H1 → sub → button → media →
+            proof points); on lg the media spans both rows of column 2. */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16 items-center mt-8 lg:mt-14">
+          <div className="max-w-[560px] lg:col-start-1 lg:row-start-1">
             <h1 className="font-heading text-[clamp(32px,4vw,48px)] font-bold text-white leading-[1.08] tracking-tight">
               It&apos;s not just software. This is your{" "}
               <span className="text-teal">assistant director</span>.
@@ -96,59 +99,36 @@ export default function DemoPage() {
             <p className="text-[19px] text-white/75 leading-relaxed mt-4">
               One price. A whole front office.
             </p>
-
-            <ul className="flex flex-col gap-4 mt-8">
-              {PROOF_POINTS.map((point) => (
-                <li key={point} className="flex items-center gap-3">
-                  <span className="w-7 h-7 rounded-full bg-teal/15 border border-teal/40 flex items-center justify-center shrink-0">
-                    <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5">
-                      <path d="M3 8.5l3.2 3.2L13 5" stroke="#0ABFBC" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </span>
-                  <span className="text-[17px] text-white/90 font-medium">{point}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Preview cards — proof the product is viewable before booking */}
-            <div className="mt-9">
-              <div className="text-[11px] font-semibold tracking-[.12em] uppercase text-white/50 mb-3">
-                See it before you book
-              </div>
-              <div className="grid grid-cols-3 gap-3">
-                {[
-                  { href: "#story-scheduling", label: "Scheduling", src: "/demo/schedule-room.png", alt: "Preview of a ChildWise room schedule" },
-                  { href: "#story-observations", label: "Observations", src: "/demo/review-drafts.png", alt: "Preview of ChildWise AI observation drafts" },
-                  { href: "#story-assistant", label: "Staff Assistant", src: "/demo/staff-assistant.png", alt: "Preview of the ChildWise Staff Assistant chat" },
-                ].map((c) => (
-                  <a
-                    key={c.label}
-                    href={c.href}
-                    className="block bg-white/[.05] border border-white/10 rounded-[12px] overflow-hidden no-underline transition-colors hover:border-teal/60"
-                  >
-                    <div className="h-[72px] sm:h-[88px] overflow-hidden border-b border-white/10">
-                      <Image src={c.src} alt={c.alt} width={1800} height={1166} className="w-full h-full object-cover object-left-top" />
-                    </div>
-                    <div className="px-2.5 py-2 text-[12px] sm:text-[13px] font-semibold text-white/85 text-center">
-                      {c.label}
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Video slot — hidden until Adam supplies a file. */}
-            {SHOW_VIDEO && VIDEO_SRC ? (
-              <div className="mt-10 rounded-[18px] overflow-hidden border border-white/15 shadow-s3">
-                <video src={VIDEO_SRC} controls playsInline className="w-full h-auto" />
-              </div>
-            ) : null}
+            <a
+              href="#book"
+              className="inline-flex w-full sm:w-auto min-h-[48px] items-center justify-center gap-2 mt-8 px-[38px] py-[15px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-ink hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(10,191,188,.3)]"
+            >
+              Book a demo
+            </a>
           </div>
 
-          {/* Booking — the page's one action */}
-          <div id="book" style={{ scrollMarginTop: "24px" }}>
-            <DemoCalendly />
+          <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2">
+            {/* Swap to video later: <DemoHeroMedia videoSrc="/videos/….mp4" alt="…" /> */}
+            <DemoHeroMedia
+              imageSrc="/demo/schedule-room.png"
+              alt="ChildWise room schedule for one week — children's expected hours above the staff shifts built to cover them"
+              width={1800}
+              height={1166}
+            />
           </div>
+
+          <ul className="flex flex-col gap-4 lg:col-start-1 lg:row-start-2 max-w-[560px]">
+            {PROOF_POINTS.map((point) => (
+              <li key={point} className="flex items-center gap-3">
+                <span className="w-7 h-7 rounded-full bg-teal/15 border border-teal/40 flex items-center justify-center shrink-0">
+                  <svg viewBox="0 0 16 16" fill="none" className="w-3.5 h-3.5">
+                    <path d="M3 8.5l3.2 3.2L13 5" stroke="#0ABFBC" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <span className="text-[17px] text-white/90 font-medium">{point}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* ───────────────────── 1. PRODUCT VISUALS ───────────────────── */}
@@ -295,21 +275,24 @@ export default function DemoPage() {
           </section>
         ) : null}
 
-        {/* ───────────────────── 5. WHAT'S INCLUDED ───────────────────── */}
-        <section className="mt-24 max-w-[640px] mx-auto text-center">
-          <p className="text-[17px] text-white/85 bg-white/[.05] border border-white/10 rounded-[12px] px-6 py-5">
+        {/* ───────────────────── 5. BOOKING ───────────────────── */}
+        <section id="book" className="mt-24 max-w-[720px] mx-auto" style={{ scrollMarginTop: "24px" }}>
+          <h2 className="font-heading text-[clamp(26px,3vw,36px)] font-semibold text-white leading-[1.15] tracking-tight text-center">
+            Pick a time
+          </h2>
+          <p className="text-[16px] text-white/70 text-center mt-3">
             Free onboarding and free data migration from your current software.
           </p>
+          {/* min-height matches the embed's final rendered height so Calendly's
+              late iframe resize doesn't change page height mid smooth-scroll
+              (which made the hero button land short of #book). */}
+          <div className="mt-8 min-h-[904px]">
+            <DemoCalendly />
+          </div>
         </section>
 
-        {/* ───────────────────── 6. CLOSING CTA ───────────────────── */}
-        <section className="mt-16 mb-10 flex flex-col items-center gap-5">
-          <a
-            href="#book"
-            className="inline-flex items-center gap-2 px-[38px] py-[18px] rounded-xl font-body text-base font-semibold cursor-pointer transition-all duration-200 no-underline border-2 border-teal bg-teal text-ink hover:bg-teal-light hover:-translate-y-px hover:shadow-[0_8px_24px_rgba(10,191,188,.3)]"
-          >
-            Book a demo
-          </a>
+        {/* ───────────────────── 6. CLOSING LINK ───────────────────── */}
+        <section className="mt-14 mb-10 flex flex-col items-center">
           <Link href="/" className="text-[14px] text-white/60 underline underline-offset-4 hover:text-teal">
             See everything ChildWise does
           </Link>
