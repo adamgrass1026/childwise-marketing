@@ -39,7 +39,7 @@ export default function PrivacyPage() {
             Privacy Policy
           </h1>
           <p className="text-[15px] text-white/60 mt-4">
-            Last updated: November 11, 2026
+            Last updated: November 22, 2026
           </p>
         </div>
       </section>
@@ -217,42 +217,71 @@ export default function PrivacyPage() {
             </p>
           </PolicySection>
 
-          <PolicySection title="5. AI-Assisted Features">
+          <PolicySection title="5. AI and Your Child's Information">
             <p>
-              ChildWise offers optional AI-assisted features that help center staff
-              document children&rsquo;s learning — for example, drafting a
-              developmental observation from a classroom photo a teacher has
-              shared, suggesting alignments to state early-learning standards, and
-              generating lesson-plan ideas.
+              <strong className="text-ink font-semibold">Everyday photos: no AI.</strong>{" "}
+              Photos taken and shared with you through ChildWise are stored
+              securely and shown to your center and your family — nothing else
+              touches them. ChildWise does not analyze everyday photos with AI
+              and does not use them in any way for any other purpose. They are
+              strictly between your center and your family.
+            </p>
+            <p className="mt-4">
+              <strong className="text-ink font-semibold">
+                The one place AI is used with a child&rsquo;s information
+              </strong>{" "}
+              is ChildWise&rsquo;s optional AI-assisted observations feature. When a
+              teacher records a developmental observation, AI helps draft the
+              write-up and connect it to your state&rsquo;s early-learning standards.
+              (AI also powers staff-facing tools — such as answering a teacher&rsquo;s
+              licensing question from the center&rsquo;s own policies, or reading a
+              blank form the center uploads — but those never involve
+              children&rsquo;s information.)
             </p>
             <ul className="list-disc pl-6 mt-4 space-y-2">
+              <li>
+                <strong className="text-ink font-semibold">Parents control it — not the center.</strong>{" "}
+                AI-assisted observations are off for your child unless you allow
+                them. In the settings of the ChildWise parent app, you can turn
+                this permission off at any time. It is a parent-only permission:
+                if a parent disables it, the center cannot enable it.
+              </li>
+              <li>
+                <strong className="text-ink font-semibold">Enforced, not just a setting.</strong>{" "}
+                The gate is enforced on our servers. When the permission is off,
+                nothing about your child — no photo, no note — is sent for AI
+                processing at all.
+              </li>
+              <li>
+                <strong className="text-ink font-semibold">Your child is never exposed to the AI.</strong>{" "}
+                Even when the feature is on, the AI never receives your child&rsquo;s
+                personal information — no name, no birthdate, no contact
+                information, no profile data. Nothing that identifies your child.
+                Any photo used for an observation is first reduced to a
+                low-resolution copy and stripped of metadata (such as location
+                and device details), and the write-up is built from the
+                classroom&rsquo;s lesson-plan context — what was being taught — not
+                from anything about the child.
+              </li>
+              <li>
+                <strong className="text-ink font-semibold">Never used to train AI models.</strong>{" "}
+                The AI processes the request and that&rsquo;s it. Our AI provider does
+                not use this content to train its models and retains it only
+                transiently for processing.
+              </li>
               <li>
                 <strong className="text-ink font-semibold">Teacher review is always required.</strong>{" "}
                 AI-drafted content is a suggestion to staff. Nothing written by AI
                 becomes part of a child&rsquo;s record or is shown to families until a
                 teacher or director at the center has reviewed and approved it.
               </li>
-              <li>
-                <strong className="text-ink font-semibold">Photo analysis is consent-gated per child.</strong>{" "}
-                A child&rsquo;s photos are analyzed by AI only when the center has
-                recorded guardian consent for that child. Without consent, that
-                child&rsquo;s photos are never sent for AI processing.
-              </li>
-              <li>
-                <strong className="text-ink font-semibold">Data minimization.</strong>{" "}
-                Before a photo is sent for AI processing it is reduced in size and
-                stripped of all metadata (such as location and device details), and
-                children&rsquo;s names are withheld from the AI. Our AI provider does
-                not use this content to train its models and retains it only
-                transiently for processing.
-              </li>
-              <li>
-                <strong className="text-ink font-semibold">Opting out.</strong>{" "}
-                Families can opt out at any time through their childcare center.
-                Opting out stops AI analysis of that child&rsquo;s photos immediately
-                and does not affect any other ChildWise service.
-              </li>
             </ul>
+            <p className="mt-4">
+              <strong className="text-ink font-semibold">Your child&rsquo;s records over time:</strong>{" "}
+              they are kept so your center and your family can see your
+              child&rsquo;s progress. They are not sold, not shared with outside
+              parties, and not used for anything beyond running the center.
+            </p>
           </PolicySection>
 
           <PolicySection title="6. Data Security">
