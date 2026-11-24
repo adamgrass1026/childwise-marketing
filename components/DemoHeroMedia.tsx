@@ -5,12 +5,14 @@ import Image from "next/image";
 export default function DemoHeroMedia({
   imageSrc,
   videoSrc,
+  poster,
   alt,
   width,
   height,
 }: {
   imageSrc?: string;
   videoSrc?: string;
+  poster?: string;
   alt: string;
   width?: number;
   height?: number;
@@ -18,7 +20,17 @@ export default function DemoHeroMedia({
   if (videoSrc) {
     return (
       <div className="rounded-[18px] overflow-hidden border border-white/15 shadow-[0_28px_72px_rgba(0,0,0,.45)]">
-        <video src={videoSrc} controls playsInline className="w-full h-auto" />
+        {/* preload=metadata + poster: nothing heavy downloads until tap —
+            most /demo traffic is mobile. */}
+        <video
+          src={videoSrc}
+          poster={poster}
+          controls
+          playsInline
+          preload="metadata"
+          aria-label={alt}
+          className="w-full h-auto"
+        />
       </div>
     );
   }

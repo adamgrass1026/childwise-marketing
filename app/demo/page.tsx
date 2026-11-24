@@ -108,12 +108,10 @@ export default function DemoPage() {
           </div>
 
           <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2">
-            {/* Swap to video later: <DemoHeroMedia videoSrc="/videos/….mp4" alt="…" /> */}
             <DemoHeroMedia
-              imageSrc="/demo/schedule-room.png"
-              alt="ChildWise room schedule for one week — children's expected hours above the staff shifts built to cover them"
-              width={1800}
-              height={1166}
+              videoSrc="/videos/demo-intro.mp4"
+              poster="/videos/demo-intro-poster.jpg"
+              alt="Two-minute introduction to ChildWise from founder Adam Grass"
             />
           </div>
 
@@ -286,7 +284,9 @@ export default function DemoPage() {
           {/* min-height matches the embed's final rendered height so Calendly's
               late iframe resize doesn't change page height mid smooth-scroll
               (which made the hero button land short of #book). */}
-          <div className="mt-8 min-h-[904px]">
+          {/* min-height desktop-only: mobile card is capped at 800px, so a
+              904px floor would reopen the dead space there. */}
+          <div className="mt-8 sm:min-h-[904px]">
             <DemoCalendly />
           </div>
         </section>
