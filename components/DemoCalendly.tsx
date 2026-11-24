@@ -22,7 +22,11 @@ export default function DemoCalendly() {
   }, []);
 
   return (
-    <div className="bg-white rounded-[18px] border border-border shadow-s3 overflow-hidden">
+    // Mobile: Calendly reports the same 904px page height at narrow widths,
+    // which includes ~190px of its own internal whitespace below the time
+    // zone line. Cap the card just past the visible content and let it
+    // scroll if the embed grows during booking; desktop is uncapped.
+    <div className="bg-white rounded-[18px] border border-border shadow-s3 overflow-x-hidden overflow-y-auto max-h-[800px] sm:max-h-none sm:overflow-hidden">
       {/* data-resize sizes the iframe to the embed's full page height, so the
           whole month grid and the time-zone line render with no inner
           scrollbar. The in-page "see the product first" cue is the preview
