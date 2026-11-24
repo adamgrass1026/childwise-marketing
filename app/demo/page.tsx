@@ -164,10 +164,10 @@ export default function DemoPage() {
                   alt="ChildWise room schedule for one week — children's expected hours above the staff shifts built to cover them"
                   width={1800}
                   height={1166}
-                  mobileWidth={548}
+                  mobileWidth={1800}
                   mobileHeight={752}
                 />
-                <Caption>ChildWise builds each room&apos;s staff schedule from those hours.</Caption>
+                <Caption>ChildWise builds each room&apos;s staff schedule from the hours children attend.</Caption>
               </div>
             </div>
           </div>
